@@ -1,0 +1,480 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91C46343208F495B00C0762F /* FrenzyApps_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */; };
+		91C46348208F495B00C0762F /* FrenzyApps_LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46347208F495B00C0762F /* FrenzyApps_LayoutTests.swift */; };
+		91C4634A208F495B00C0762F /* FrenzyApps_Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91C46361208F4B7B00C0762F /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46360208F4B7B00C0762F /* GridLayout.swift */; };
+		91C46363208F4BA100C0762F /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46362208F4BA100C0762F /* UIViewAdditions.swift */; };
+		91C9F865208F5D490026F66C /* UIEdgeInsetsAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */; };
+		91C9F867208F5DB30026F66C /* UIColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F866208F5DB30026F66C /* UIColorAdditions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91C46344208F495B00C0762F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91C46330208F495B00C0762F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C46338208F495B00C0762F;
+			remoteInfo = FrenzyApps.Layout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenzyApps_Layout.h; sourceTree = "<group>"; };
+		91C4633D208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C46342208F495B00C0762F /* FrenzyApps.LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C46347208F495B00C0762F /* FrenzyApps_LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenzyApps_LayoutTests.swift; sourceTree = "<group>"; };
+		91C46349208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C46360208F4B7B00C0762F /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		91C46362208F4BA100C0762F /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
+		91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsAdditions.swift; sourceTree = "<group>"; };
+		91C9F866208F5DB30026F66C /* UIColorAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAdditions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91C46335208F495B00C0762F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C4633F208F495B00C0762F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C46343208F495B00C0762F /* FrenzyApps_Layout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91C4632F208F495B00C0762F = {
+			isa = PBXGroup;
+			children = (
+				91C4633B208F495B00C0762F /* FrenzyApps.Layout */,
+				91C46346208F495B00C0762F /* FrenzyApps.LayoutTests */,
+				91C4633A208F495B00C0762F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91C4633A208F495B00C0762F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */,
+				91C46342208F495B00C0762F /* FrenzyApps.LayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91C4633B208F495B00C0762F /* FrenzyApps.Layout */ = {
+			isa = PBXGroup;
+			children = (
+				91C46360208F4B7B00C0762F /* GridLayout.swift */,
+				91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */,
+				91C4633D208F495B00C0762F /* Info.plist */,
+				91C46362208F4BA100C0762F /* UIViewAdditions.swift */,
+				91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */,
+				91C9F866208F5DB30026F66C /* UIColorAdditions.swift */,
+			);
+			path = FrenzyApps.Layout;
+			sourceTree = "<group>";
+		};
+		91C46346208F495B00C0762F /* FrenzyApps.LayoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				91C46347208F495B00C0762F /* FrenzyApps_LayoutTests.swift */,
+				91C46349208F495B00C0762F /* Info.plist */,
+			);
+			path = FrenzyApps.LayoutTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		91C46336208F495B00C0762F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C4634A208F495B00C0762F /* FrenzyApps_Layout.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		91C46338208F495B00C0762F /* FrenzyApps.Layout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C4634D208F495B00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout" */;
+			buildPhases = (
+				91C46334208F495B00C0762F /* Sources */,
+				91C46335208F495B00C0762F /* Frameworks */,
+				91C46336208F495B00C0762F /* Headers */,
+				91C46337208F495B00C0762F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrenzyApps.Layout;
+			productName = FrenzyApps.Layout;
+			productReference = 91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		91C46341208F495B00C0762F /* FrenzyApps.LayoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C46350208F495B00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.LayoutTests" */;
+			buildPhases = (
+				91C4633E208F495B00C0762F /* Sources */,
+				91C4633F208F495B00C0762F /* Frameworks */,
+				91C46340208F495B00C0762F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C46345208F495B00C0762F /* PBXTargetDependency */,
+			);
+			name = FrenzyApps.LayoutTests;
+			productName = FrenzyApps.LayoutTests;
+			productReference = 91C46342208F495B00C0762F /* FrenzyApps.LayoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91C46330208F495B00C0762F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Mihai Mihaila";
+				TargetAttributes = {
+					91C46338208F495B00C0762F = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					91C46341208F495B00C0762F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 91C46333208F495B00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91C4632F208F495B00C0762F;
+			productRefGroup = 91C4633A208F495B00C0762F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91C46338208F495B00C0762F /* FrenzyApps.Layout */,
+				91C46341208F495B00C0762F /* FrenzyApps.LayoutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91C46337208F495B00C0762F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46340208F495B00C0762F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91C46334208F495B00C0762F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C46363208F4BA100C0762F /* UIViewAdditions.swift in Sources */,
+				91C9F867208F5DB30026F66C /* UIColorAdditions.swift in Sources */,
+				91C46361208F4B7B00C0762F /* GridLayout.swift in Sources */,
+				91C9F865208F5D490026F66C /* UIEdgeInsetsAdditions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C4633E208F495B00C0762F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C46348208F495B00C0762F /* FrenzyApps_LayoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91C46345208F495B00C0762F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C46338208F495B00C0762F /* FrenzyApps.Layout */;
+			targetProxy = 91C46344208F495B00C0762F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		91C4634B208F495B00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91C4634C208F495B00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		91C4634E208F495B00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FrenzyApps.Layout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91C4634F208F495B00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FrenzyApps.Layout/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		91C46351208F495B00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				INFOPLIST_FILE = FrenzyApps.LayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-LayoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91C46352208F495B00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				INFOPLIST_FILE = FrenzyApps.LayoutTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-LayoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91C46333208F495B00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C4634B208F495B00C0762F /* Debug */,
+				91C4634C208F495B00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C4634D208F495B00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C4634E208F495B00C0762F /* Debug */,
+				91C4634F208F495B00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C46350208F495B00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.LayoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C46351208F495B00C0762F /* Debug */,
+				91C46352208F495B00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91C46330208F495B00C0762F /* Project object */;
+}

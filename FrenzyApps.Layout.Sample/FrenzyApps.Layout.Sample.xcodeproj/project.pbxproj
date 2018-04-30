@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91C463FB208F568D00C0762F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C463FA208F568D00C0762F /* AppDelegate.swift */; };
+		91C463FD208F568D00C0762F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C463FC208F568D00C0762F /* ViewController.swift */; };
+		91C46400208F568D00C0762F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C463FE208F568D00C0762F /* Main.storyboard */; };
+		91C46402208F568E00C0762F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C46401208F568E00C0762F /* Assets.xcassets */; };
+		91C46405208F568E00C0762F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C46403208F568E00C0762F /* LaunchScreen.storyboard */; };
+		91C46410208F568E00C0762F /* FrenzyApps_Layout_SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4640F208F568E00C0762F /* FrenzyApps_Layout_SampleTests.swift */; };
+		91C4641B208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4641A208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift */; };
+		91C9F85F208F5B130026F66C /* FrenzyApps_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */; };
+		91C9F860208F5B130026F66C /* FrenzyApps_Layout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91C9F863208F5BC90026F66C /* GridLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F862208F5BC90026F66C /* GridLayoutTests.swift */; };
+		91C9F869208F5EAA0026F66C /* XCTestCaseAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F868208F5EAA0026F66C /* XCTestCaseAdditions.swift */; };
+		CBC128E8101D8885FF98B904 /* Pods_FrenzyApps_Layout_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD033718B54CD71C0C7DB55A /* Pods_FrenzyApps_Layout_SampleTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		91C4640C208F568E00C0762F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91C463EF208F568D00C0762F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C463F6208F568D00C0762F;
+			remoteInfo = FrenzyApps.Layout.Sample;
+		};
+		91C46417208F568E00C0762F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 91C463EF208F568D00C0762F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91C463F6208F568D00C0762F;
+			remoteInfo = FrenzyApps.Layout.Sample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91C9F861208F5B130026F66C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				91C9F860208F5B130026F66C /* FrenzyApps_Layout.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3840840ADB716D995EA69073 /* Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout.SampleTests/Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		91C463F7208F568D00C0762F /* FrenzyApps.Layout.Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenzyApps.Layout.Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C463FA208F568D00C0762F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		91C463FC208F568D00C0762F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91C463FF208F568D00C0762F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91C46401208F568E00C0762F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		91C46404208F568E00C0762F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91C46406208F568E00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C4640B208F568E00C0762F /* FrenzyApps.Layout.SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.Layout.SampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C4640F208F568E00C0762F /* FrenzyApps_Layout_SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenzyApps_Layout_SampleTests.swift; sourceTree = "<group>"; };
+		91C46411208F568E00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C46416208F568E00C0762F /* FrenzyApps.Layout.SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.Layout.SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C4641A208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenzyApps_Layout_SampleUITests.swift; sourceTree = "<group>"; };
+		91C4641C208F568E00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91C9F862208F5BC90026F66C /* GridLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTests.swift; sourceTree = "<group>"; };
+		91C9F868208F5EAA0026F66C /* XCTestCaseAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseAdditions.swift; sourceTree = "<group>"; };
+		DD033718B54CD71C0C7DB55A /* Pods_FrenzyApps_Layout_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenzyApps_Layout_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5F054CBB5A80BC7804322F3 /* Pods-FrenzyApps.Layout.SampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.SampleTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout.SampleTests/Pods-FrenzyApps.Layout.SampleTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91C463F4208F568D00C0762F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C9F85F208F5B130026F66C /* FrenzyApps_Layout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46408208F568E00C0762F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC128E8101D8885FF98B904 /* Pods_FrenzyApps_Layout_SampleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46413208F568E00C0762F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		41463FDE0A15778439C1C313 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD033718B54CD71C0C7DB55A /* Pods_FrenzyApps_Layout_SampleTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91C463EE208F568D00C0762F = {
+			isa = PBXGroup;
+			children = (
+				91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */,
+				91C463F9208F568D00C0762F /* FrenzyApps.Layout.Sample */,
+				91C4640E208F568E00C0762F /* FrenzyApps.Layout.SampleTests */,
+				91C46419208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */,
+				91C463F8208F568D00C0762F /* Products */,
+				C9D15FFBC86524C6440272E7 /* Pods */,
+				41463FDE0A15778439C1C313 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		91C463F8208F568D00C0762F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91C463F7208F568D00C0762F /* FrenzyApps.Layout.Sample.app */,
+				91C4640B208F568E00C0762F /* FrenzyApps.Layout.SampleTests.xctest */,
+				91C46416208F568E00C0762F /* FrenzyApps.Layout.SampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91C463F9208F568D00C0762F /* FrenzyApps.Layout.Sample */ = {
+			isa = PBXGroup;
+			children = (
+				91C463FA208F568D00C0762F /* AppDelegate.swift */,
+				91C463FC208F568D00C0762F /* ViewController.swift */,
+				91C463FE208F568D00C0762F /* Main.storyboard */,
+				91C46401208F568E00C0762F /* Assets.xcassets */,
+				91C46403208F568E00C0762F /* LaunchScreen.storyboard */,
+				91C46406208F568E00C0762F /* Info.plist */,
+			);
+			path = FrenzyApps.Layout.Sample;
+			sourceTree = "<group>";
+		};
+		91C4640E208F568E00C0762F /* FrenzyApps.Layout.SampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				91C4640F208F568E00C0762F /* FrenzyApps_Layout_SampleTests.swift */,
+				91C46411208F568E00C0762F /* Info.plist */,
+				91C9F862208F5BC90026F66C /* GridLayoutTests.swift */,
+				91C9F868208F5EAA0026F66C /* XCTestCaseAdditions.swift */,
+			);
+			path = FrenzyApps.Layout.SampleTests;
+			sourceTree = "<group>";
+		};
+		91C46419208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91C4641A208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift */,
+				91C4641C208F568E00C0762F /* Info.plist */,
+			);
+			path = FrenzyApps.Layout.SampleUITests;
+			sourceTree = "<group>";
+		};
+		C9D15FFBC86524C6440272E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3840840ADB716D995EA69073 /* Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig */,
+				E5F054CBB5A80BC7804322F3 /* Pods-FrenzyApps.Layout.SampleTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C4641F208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.Sample" */;
+			buildPhases = (
+				91C463F3208F568D00C0762F /* Sources */,
+				91C463F4208F568D00C0762F /* Frameworks */,
+				91C463F5208F568D00C0762F /* Resources */,
+				91C9F861208F5B130026F66C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FrenzyApps.Layout.Sample;
+			productName = FrenzyApps.Layout.Sample;
+			productReference = 91C463F7208F568D00C0762F /* FrenzyApps.Layout.Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		91C4640A208F568E00C0762F /* FrenzyApps.Layout.SampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C46422208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.SampleTests" */;
+			buildPhases = (
+				7CFA2A9D6F5C619281BFBF25 /* [CP] Check Pods Manifest.lock */,
+				91C46407208F568E00C0762F /* Sources */,
+				91C46408208F568E00C0762F /* Frameworks */,
+				91C46409208F568E00C0762F /* Resources */,
+				8DF728F8BA1D882D89EE98F1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C4640D208F568E00C0762F /* PBXTargetDependency */,
+			);
+			name = FrenzyApps.Layout.SampleTests;
+			productName = FrenzyApps.Layout.SampleTests;
+			productReference = 91C4640B208F568E00C0762F /* FrenzyApps.Layout.SampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91C46415208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C46425208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.SampleUITests" */;
+			buildPhases = (
+				91C46412208F568E00C0762F /* Sources */,
+				91C46413208F568E00C0762F /* Frameworks */,
+				91C46414208F568E00C0762F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				91C46418208F568E00C0762F /* PBXTargetDependency */,
+			);
+			name = FrenzyApps.Layout.SampleUITests;
+			productName = FrenzyApps.Layout.SampleUITests;
+			productReference = 91C46416208F568E00C0762F /* FrenzyApps.Layout.SampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91C463EF208F568D00C0762F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Mihai Mihaila";
+				TargetAttributes = {
+					91C463F6208F568D00C0762F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					91C4640A208F568E00C0762F = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 91C463F6208F568D00C0762F;
+					};
+					91C46415208F568E00C0762F = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 91C463F6208F568D00C0762F;
+					};
+				};
+			};
+			buildConfigurationList = 91C463F2208F568D00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout.Sample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 91C463EE208F568D00C0762F;
+			productRefGroup = 91C463F8208F568D00C0762F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */,
+				91C4640A208F568E00C0762F /* FrenzyApps.Layout.SampleTests */,
+				91C46415208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		91C463F5208F568D00C0762F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C46405208F568E00C0762F /* LaunchScreen.storyboard in Resources */,
+				91C46402208F568E00C0762F /* Assets.xcassets in Resources */,
+				91C46400208F568D00C0762F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46409208F568E00C0762F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46414208F568E00C0762F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7CFA2A9D6F5C619281BFBF25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FrenzyApps.Layout.SampleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DF728F8BA1D882D89EE98F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-FrenzyApps.Layout.SampleTests/Pods-FrenzyApps.Layout.SampleTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KIF/KIF.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KIF.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-FrenzyApps.Layout.SampleTests/Pods-FrenzyApps.Layout.SampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91C463F3208F568D00C0762F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C463FD208F568D00C0762F /* ViewController.swift in Sources */,
+				91C463FB208F568D00C0762F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46407208F568E00C0762F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C46410208F568E00C0762F /* FrenzyApps_Layout_SampleTests.swift in Sources */,
+				91C9F863208F5BC90026F66C /* GridLayoutTests.swift in Sources */,
+				91C9F869208F5EAA0026F66C /* XCTestCaseAdditions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91C46412208F568E00C0762F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91C4641B208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		91C4640D208F568E00C0762F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */;
+			targetProxy = 91C4640C208F568E00C0762F /* PBXContainerItemProxy */;
+		};
+		91C46418208F568E00C0762F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */;
+			targetProxy = 91C46417208F568E00C0762F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		91C463FE208F568D00C0762F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C463FF208F568D00C0762F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		91C46403208F568E00C0762F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91C46404208F568E00C0762F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		91C4641D208F568E00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		91C4641E208F568E00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		91C46420208F568E00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				INFOPLIST_FILE = FrenzyApps.Layout.Sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91C46421208F568E00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				INFOPLIST_FILE = FrenzyApps.Layout.Sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-Sample";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		91C46423208F568E00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3840840ADB716D995EA69073 /* Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FrenzyApps.Layout.SampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrenzyApps.Layout.Sample.app/FrenzyApps.Layout.Sample";
+			};
+			name = Debug;
+		};
+		91C46424208F568E00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5F054CBB5A80BC7804322F3 /* Pods-FrenzyApps.Layout.SampleTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FrenzyApps.Layout.SampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrenzyApps.Layout.Sample.app/FrenzyApps.Layout.Sample";
+			};
+			name = Release;
+		};
+		91C46426208F568E00C0762F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				INFOPLIST_FILE = FrenzyApps.Layout.SampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FrenzyApps.Layout.Sample;
+			};
+			name = Debug;
+		};
+		91C46427208F568E00C0762F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4V52TL25P5;
+				INFOPLIST_FILE = FrenzyApps.Layout.SampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FrenzyApps.Layout.Sample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91C463F2208F568D00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout.Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C4641D208F568E00C0762F /* Debug */,
+				91C4641E208F568E00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C4641F208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C46420208F568E00C0762F /* Debug */,
+				91C46421208F568E00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C46422208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.SampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C46423208F568E00C0762F /* Debug */,
+				91C46424208F568E00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C46425208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.SampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91C46426208F568E00C0762F /* Debug */,
+				91C46427208F568E00C0762F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91C463EF208F568D00C0762F /* Project object */;
+}
