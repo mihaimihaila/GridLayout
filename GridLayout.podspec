@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GridLayout'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Swift library for displaying UI elements in a grid like structure'
  
   s.description      = <<-DESC
@@ -15,5 +15,5 @@ Items inside the grid can be placed on any row or column.
   s.source           = { :git => 'https://github.com/mihaimihaila/GridLayout.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '10.0'
-  s.source_files = 'GridLayout/*.{swift,plist}'
+  s.source_files = 'GridLayout/*'
 end

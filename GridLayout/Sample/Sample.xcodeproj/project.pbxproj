@@ -22,6 +22,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		917314A82098781400B1FD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 917314A32098781400B1FD21 /* Layout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 91C46339208F495B00C0762F;
+			remoteInfo = FrenzyApps.Layout;
+		};
+		917314AA2098781400B1FD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 917314A32098781400B1FD21 /* Layout.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 91C46342208F495B00C0762F;
+			remoteInfo = FrenzyApps.LayoutTests;
+		};
 		91C4640C208F568E00C0762F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91C463EF208F568D00C0762F /* Project object */;
@@ -54,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		3840840ADB716D995EA69073 /* Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout.SampleTests/Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		917314A32098781400B1FD21 /* Layout.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Layout.xcodeproj; path = ../Layout/Layout.xcodeproj; sourceTree = "<group>"; };
 		91C463F7208F568D00C0762F /* FrenzyApps.Layout.Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrenzyApps.Layout.Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C463FA208F568D00C0762F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C463FC208F568D00C0762F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,9 +124,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		917314A42098781400B1FD21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				917314A92098781400B1FD21 /* FrenzyApps_Layout.framework */,
+				917314AB2098781400B1FD21 /* FrenzyApps.LayoutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		91C463EE208F568D00C0762F = {
 			isa = PBXGroup;
 			children = (
+				917314A32098781400B1FD21 /* Layout.xcodeproj */,
 				91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */,
 				91C463F9208F568D00C0762F /* FrenzyApps.Layout.Sample */,
 				91C4640E208F568E00C0762F /* FrenzyApps.Layout.SampleTests */,
@@ -256,7 +281,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 91C463F2208F568D00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout.Sample" */;
+			buildConfigurationList = 91C463F2208F568D00C0762F /* Build configuration list for PBXProject "Sample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -267,6 +292,12 @@
 			mainGroup = 91C463EE208F568D00C0762F;
 			productRefGroup = 91C463F8208F568D00C0762F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 917314A42098781400B1FD21 /* Products */;
+					ProjectRef = 917314A32098781400B1FD21 /* Layout.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */,
@@ -275,6 +306,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		917314A92098781400B1FD21 /* FrenzyApps_Layout.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FrenzyApps_Layout.framework;
+			remoteRef = 917314A82098781400B1FD21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		917314AB2098781400B1FD21 /* FrenzyApps.LayoutTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FrenzyApps.LayoutTests.xctest;
+			remoteRef = 917314AA2098781400B1FD21 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		91C463F5208F568D00C0762F /* Resources */ = {
@@ -526,7 +574,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
 				INFOPLIST_FILE = FrenzyApps.Layout.Sample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -541,7 +592,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
 				INFOPLIST_FILE = FrenzyApps.Layout.Sample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -558,7 +612,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FrenzyApps.Layout.SampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -576,7 +634,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FrenzyApps.Layout.SampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -592,7 +654,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
 				INFOPLIST_FILE = FrenzyApps.Layout.SampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -608,7 +674,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
 				INFOPLIST_FILE = FrenzyApps.Layout.SampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -620,7 +690,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91C463F2208F568D00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout.Sample" */ = {
+		91C463F2208F568D00C0762F /* Build configuration list for PBXProject "Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91C4641D208F568E00C0762F /* Debug */,
