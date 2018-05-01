@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		91C46343208F495B00C0762F /* FrenzyApps_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */; };
-		91C46348208F495B00C0762F /* FrenzyApps_LayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46347208F495B00C0762F /* FrenzyApps_LayoutTests.swift */; };
 		91C4634A208F495B00C0762F /* FrenzyApps_Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91C46361208F4B7B00C0762F /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46360208F4B7B00C0762F /* GridLayout.swift */; };
 		91C46363208F4BA100C0762F /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46362208F4BA100C0762F /* UIViewAdditions.swift */; };
@@ -31,7 +30,6 @@
 		91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenzyApps_Layout.h; sourceTree = "<group>"; };
 		91C4633D208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C46342208F495B00C0762F /* FrenzyApps.LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C46347208F495B00C0762F /* FrenzyApps_LayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenzyApps_LayoutTests.swift; sourceTree = "<group>"; };
 		91C46349208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C46360208F4B7B00C0762F /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		91C46362208F4BA100C0762F /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 		91C46346208F495B00C0762F /* FrenzyApps.LayoutTests */ = {
 			isa = PBXGroup;
 			children = (
-				91C46347208F495B00C0762F /* FrenzyApps_LayoutTests.swift */,
 				91C46349208F495B00C0762F /* Info.plist */,
 			);
 			path = FrenzyApps.LayoutTests;
@@ -167,7 +164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 91C46333208F495B00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout" */;
+			buildConfigurationList = 91C46333208F495B00C0762F /* Build configuration list for PBXProject "Layout" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -218,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91C46348208F495B00C0762F /* FrenzyApps_LayoutTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +443,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91C46333208F495B00C0762F /* Build configuration list for PBXProject "FrenzyApps.Layout" */ = {
+		91C46333208F495B00C0762F /* Build configuration list for PBXProject "Layout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91C4634B208F495B00C0762F /* Debug */,

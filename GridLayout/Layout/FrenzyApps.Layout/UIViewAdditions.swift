@@ -23,7 +23,7 @@ extension UIView {
         heightAnchor.constraint(equalToConstant: size.height).isActive = true
     }
     
-    public func constraint(size: Int) {
-        constraint(size: CGSize(width: size, height: size))
+    public func constraint(equalSize: Int) {
+        constraint(size: CGSize(width: equalSize, height: equalSize))
     }
 }
