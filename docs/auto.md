@@ -1,4 +1,4 @@
-Columns and rows can also occupy *at most* the size if the largest item they contain.
+Columns and rows can also occupy *at most* the size of the largest item they contain.
 These kinds of column and rows are referred to as *auto*.
 
 ```swift
@@ -34,4 +34,5 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle1,
                                                         ColumnDefinition(isAuto: true)])
 ```
 In this example the second column is *auto* while the the first one is not. This means the second column will fit the space required by `rectangle2`, while the first column will fill the remaining space.
+
 ![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/8.png "Sample")

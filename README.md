@@ -17,3 +17,4 @@ pod 'GridLayout'
 ### [Ratio rows and columns](docs/ratio.md)
 ### [Auto rows and columns](docs/auto.md)
 ### [Items spanning multiple rows and / or columns](docs/span.md)
+### [Several dozens KIF tests](GridLayout/Sample/FrenzyApps.Layout.SampleTests/GridLayoutTests.swift) validate the current layout and their output can be found [here](https://github.com/mihaimihaila/GridLayout/tree/master/GridLayout/Output).

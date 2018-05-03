@@ -30,8 +30,11 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle5,
                                                         ColumnDefinition()])
 ```
 In this example `rectangle5` spans 2 columns, while being placed by default at row: 0 and column: 0. This means a virtual column is created with the properties of column starting at 0 and ending at 1. By stretching `rectangle5` both horizontally and vertically, the precise positioning within the grid can be observed.
+
 ![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/9.png "Sample")
 
 #### Notice
 
-In this example we placed more than one item in the grid at the same row and column. This is an accepted behavior and the z order corresponds to the order the index of the `GridItem` in the `items` collection. In this case `rectangle5` appears below `rectangle1` and `rectangle2` because it appears first in the `items` collection. If `rectangle1` and `rectangle2` were to overlap, `rectangle1` would appear below `rectangle2`.
+In this example we placed more than one item in the grid at the same row and column. This is an accepted behavior and the z order corresponds to the order the index of the `GridItem` in the `items` collection. 
+`rectangle5` appears below `rectangle1` and `rectangle2` because it appears first in the `items` collection.
+If `rectangle1` and `rectangle2` were to overlap, `rectangle1` would appear below `rectangle2`.
