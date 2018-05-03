@@ -40,7 +40,7 @@ public class ColumnDefinition: DimensionDefinition {
     
 public class Position: Equatable, Hashable {
     public var hashValue: Int {
-        return row * 1000 + 100 * column + 10 * rowSpan + columnSpan
+        return row * 1000 + column * 100 + rowSpan * 10 + columnSpan
     }
     
     public static func ==(lhs: Position, rhs: Position) -> Bool {
