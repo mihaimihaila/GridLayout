@@ -13,7 +13,7 @@ pod 'GridLayout'
 ## Documentation
 
 ### [Getting started](docs/getting-started.md)
-### [Alignment](docs/alignment.md) (docs in progress)
+### [Alignment](docs/alignment.md)
 ### [Ratio rows and columns](docs/ratio.md)
 ### [Auto rows and columns](docs/auto.md)
 ### [Items spanning multiple rows and / or columns](docs/span.md)
