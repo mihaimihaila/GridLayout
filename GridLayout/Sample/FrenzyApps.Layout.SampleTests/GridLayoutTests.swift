@@ -166,6 +166,31 @@ extension GridLayoutTests {
         XCTAssertEqual(CGRect(x: 50, y: 50, width: 50, height: 50), itemView.frame)
         saveScreenshot()
     }
+    
+    func testGrid2x2ItemPlacedAt1x0WithoutColumnSpanShouldNotSpanColumns() {
+        let item1 = UIView.testSpacer()
+        let item2 = UIView.testSpacer()
+        
+        let view = UIView.gridLayoutView(items: [ GridItem(item1,
+                                                           position: Position(columnSpan: 2),
+                                                           horizontalAlignment: .stretch,
+                                                           verticalAlignment: .stretch),
+                                                  GridItem(item2,
+                                                           row: 1,
+                                                           horizontalAlignment: .stretch,
+                                                           verticalAlignment: .stretch)],
+                                         rowDefinitions: [RowDefinition(),
+                                                          RowDefinition()],
+                                         columnDefinitions: [ColumnDefinition(),
+                                                             ColumnDefinition()])
+        
+        addGridToScene(view, width: 90, height: 90)
+        
+        XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 45), item1.frame)
+        XCTAssertEqual(CGRect(x: 0, y: 45, width: 45, height: 45), item2.frame)
+        
+        saveScreenshot()
+    }
 }
 
 // MARK: 3x1 with several items in the same cells
@@ -175,8 +200,8 @@ extension GridLayoutTests {
         let item2 = UIView.testSpacer()
         let item3 = UIView.testSpacer()
         
-        item1.constraint(size: 10)
-        item2.constraint(size: 20)
+        item1.constraint(equalSize: 10)
+        item2.constraint(equalSize: 20)
         
         let view = UIView.gridLayoutView(items: [
             GridItem(item3,
