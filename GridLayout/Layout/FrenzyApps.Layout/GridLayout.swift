@@ -63,6 +63,12 @@ public class Position: Equatable, Hashable {
     }
 }
 
+extension Position: CustomStringConvertible {
+    public var description: String {
+        return "Position: row: \(row), column: \(column), rowSpan: \(rowSpan), columnSpan: \(columnSpan)"
+    }
+}
+
 public class GridItem {
     public let view: UIView
     public var position: Position
@@ -93,6 +99,12 @@ public class GridItem {
                   horizontalAlignment: horizontalAlignment,
                   verticalAlignment: verticalAlignment,
                   margin: margin)
+    }
+}
+
+extension GridItem: CustomStringConvertible {
+    public var description: String {
+        return "GridItem:\n\(position)\nhorizontal: \(horizontalAlignment)\nvertical: \(verticalAlignment)"
     }
 }
 
