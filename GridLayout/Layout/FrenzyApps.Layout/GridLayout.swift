@@ -34,7 +34,8 @@ public class DimensionDefinition {
 
 public enum Row {
     case auto
-    case fill(ratio: CGFloat)
+    case fill
+    case fillHeight(ratio: CGFloat)
 }
 
 public extension Row {
@@ -42,15 +43,18 @@ public extension Row {
         switch self {
         case .auto:
             return RowDefinition(isAuto: true)
-        case .fill(let ratio):
-           return RowDefinition(ratio: ratio)
+        case .fill:
+           return RowDefinition(ratio: 1)
+        case .fillHeight(let ratio):
+        return RowDefinition(ratio: ratio)
         }
     }
 }
 
 public enum Column {
     case auto
-    case fill(ratio: CGFloat)
+    case fill
+    case fillWidth(ratio: CGFloat)
 }
 
 public extension Column {
@@ -58,7 +62,9 @@ public extension Column {
         switch self {
         case .auto:
             return ColumnDefinition(isAuto: true)
-        case .fill(let ratio):
+        case .fill:
+            return ColumnDefinition(ratio: 1)
+        case .fillWidth(let ratio):
             return ColumnDefinition(ratio: ratio)
         }
     }

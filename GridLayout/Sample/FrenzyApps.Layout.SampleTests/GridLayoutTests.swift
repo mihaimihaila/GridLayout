@@ -74,7 +74,7 @@ class GridLayoutTests: KIFTestCase {
                                                  GridItem(itemView2, row: 1,
                                                           horizontalAlignment: .stretch,
                                                           verticalAlignment: .stretch)],
-                                         rows: [.auto, .fill(ratio: 2)],
+                                         rows: [.auto, .fill],
                                          columns: [.auto])
         
         itemView1.constraint(width: 30, height: 30)

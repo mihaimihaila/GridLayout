@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'GridLayout'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'Swift library for displaying UI elements in a grid like structure'
   s.description      = <<-DESC
 Swift library for displaying UI elements in a grid like structure.
