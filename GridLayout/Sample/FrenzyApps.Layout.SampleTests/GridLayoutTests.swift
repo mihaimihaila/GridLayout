@@ -66,6 +66,30 @@ class GridLayoutTests: KIFTestCase {
         try? UIImagePNGRepresentation(image)?.write(to: filePath)
     }
     
+    func testGridTwoItemsUsingConvenientBuilderMethod() {
+        let itemView1 = UIView.testSpacer()
+        let itemView2 = UIView.testSpacer()
+        
+        let view = UIView.gridLayoutView(items: [GridItem(itemView1),
+                                                 GridItem(itemView2, row: 1,
+                                                          horizontalAlignment: .stretch,
+                                                          verticalAlignment: .stretch)],
+                                         rows: [.auto, .fill(ratio: 2)],
+                                         columns: [.auto])
+        
+        itemView1.constraint(width: 30, height: 30)
+        
+        let width: CGFloat = 100
+        let height: CGFloat = 100
+        addGridToScene(view, width: width, height: height)
+        
+        XCTAssertEqual(CGRect(x: 35, y: 0, width: 30, height: 30), itemView1.frame)
+        XCTAssertEqual(CGRect(x: 0, y: 30, width: 100, height: 70), itemView2.frame)
+        
+        saveScreenshot()
+    }
+    
+    
     func testGrid1x1ItemPlaced0x0() {
         let itemView = UIView.testSpacer()
         

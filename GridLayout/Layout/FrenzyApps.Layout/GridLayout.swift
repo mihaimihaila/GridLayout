@@ -32,6 +32,38 @@ public class DimensionDefinition {
     }
 }
 
+public enum Row {
+    case auto
+    case fill(ratio: CGFloat)
+}
+
+public extension Row {
+    var rowDefinition: RowDefinition {
+        switch self {
+        case .auto:
+            return RowDefinition(isAuto: true)
+        case .fill(let ratio):
+           return RowDefinition(ratio: ratio)
+        }
+    }
+}
+
+public enum Column {
+    case auto
+    case fill(ratio: CGFloat)
+}
+
+public extension Column {
+    var columnDefinition: ColumnDefinition {
+        switch self {
+        case .auto:
+            return ColumnDefinition(isAuto: true)
+        case .fill(let ratio):
+            return ColumnDefinition(ratio: ratio)
+        }
+    }
+}
+
 public class RowDefinition: DimensionDefinition {
 }
 
@@ -109,6 +141,15 @@ extension GridItem: CustomStringConvertible {
 }
 
 public extension UIView {
+    static func gridLayoutView(items: [GridItem],
+                               rows: [Row] = [.auto],
+                               columns: [Column] = [.auto]) -> UIView {
+        
+        return gridLayoutView(items: items,
+                              rowDefinitions: rows.map { $0.rowDefinition},
+                              columnDefinitions: columns.map { $0.columnDefinition })
+    }
+    
     // Auto rows and columns attempt to stretch their content, additional size constraints should be added appropriately
     // A view inside a a grid that is placed in another view tends to favor the outer grid size. To avoid this behavior, stretch the inner most view
     // Use stretch on items with margins placed in auto rows or columns

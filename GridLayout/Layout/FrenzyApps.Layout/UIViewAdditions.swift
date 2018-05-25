@@ -19,8 +19,12 @@ extension UIView {
     }
     
     public func constraint(size: CGSize) {
-        widthAnchor.constraint(equalToConstant: size.width).isActive = true
-        heightAnchor.constraint(equalToConstant: size.height).isActive = true
+        constraint(width: size.width, height: size.height)
+    }
+    
+    public func constraint(width: CGFloat, height: CGFloat) {
+        widthAnchor.constraint(equalToConstant: width).isActive = true
+        heightAnchor.constraint(equalToConstant: height).isActive = true
     }
     
     public func constraint(equalSize: Int) {
