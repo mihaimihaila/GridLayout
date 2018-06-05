@@ -30,7 +30,6 @@
 		91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenzyApps_Layout.h; sourceTree = "<group>"; };
 		91C4633D208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C46342208F495B00C0762F /* FrenzyApps.LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C46349208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C46360208F4B7B00C0762F /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		91C46362208F4BA100C0762F /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
 		91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsAdditions.swift; sourceTree = "<group>"; };
@@ -60,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				91C4633B208F495B00C0762F /* FrenzyApps.Layout */,
-				91C46346208F495B00C0762F /* FrenzyApps.LayoutTests */,
 				91C4633A208F495B00C0762F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,14 +83,6 @@
 				91C9F866208F5DB30026F66C /* UIColorAdditions.swift */,
 			);
 			path = FrenzyApps.Layout;
-			sourceTree = "<group>";
-		};
-		91C46346208F495B00C0762F /* FrenzyApps.LayoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				91C46349208F495B00C0762F /* Info.plist */,
-			);
-			path = FrenzyApps.LayoutTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
