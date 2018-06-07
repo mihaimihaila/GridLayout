@@ -7,7 +7,7 @@ DEPENDENCIES:
   - KIF
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - KIF
 
 SPEC CHECKSUMS:
@@ -15,4 +15,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c07f75d4c50ee64bd6bbc12df5ce5f637b5ef358
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

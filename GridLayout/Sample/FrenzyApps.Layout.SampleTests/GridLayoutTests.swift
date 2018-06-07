@@ -23,7 +23,7 @@ extension UIView {
     }
 }
 
-class GridLayoutTests: KIFTestCase {
+class GridLayoutTestsBase: KIFTestCase {
     
     let viewController = UIViewController()
     
@@ -66,6 +66,9 @@ class GridLayoutTests: KIFTestCase {
         try? UIImagePNGRepresentation(image)?.write(to: filePath)
     }
     
+}
+
+class GridLayoutTestsBasic: GridLayoutTestsBase {
     func testGridTwoItemsUsingConvenientBuilderMethod() {
         let itemView1 = UIView.testSpacer()
         let itemView2 = UIView.testSpacer()
@@ -154,7 +157,7 @@ class GridLayoutTests: KIFTestCase {
 }
 
 // MARK: 2x2
-extension GridLayoutTests {
+class GridLayoutTests2x2: GridLayoutTestsBase {
     func testGrid2x2ItemPlacedAt0x0() {
         let itemView = UIView.testSpacer()
         
@@ -218,7 +221,7 @@ extension GridLayoutTests {
 }
 
 // MARK: 3x1 with several items in the same cells
-extension GridLayoutTests {
+class GridLayoutTests3x1: GridLayoutTestsBase {
     func testGrid3x1WithItemSpanningAutoRows() {
         let item1 = UIView.testSpacer()
         let item2 = UIView.testSpacer()
@@ -303,8 +306,7 @@ extension GridLayoutTests {
     }
 }
 
-// MARK: 3x3
-extension GridLayoutTests {
+class GridLayoutTests3x3: GridLayoutTestsBase {
     func testGrid3x3ItemPlacedAt0x0() {
         let itemView = UIView.testSpacer()
         
@@ -387,7 +389,7 @@ extension GridLayoutTests {
     }
 }
 
-extension GridLayoutTests {
+class GridLayoutTestsInsideGrid: GridLayoutTestsBase {
     func testGrid1x1CenterInsideAnotherGrid() {
         let itemView = UIView.gridLayoutView(items: [],
                                              rowDefinitions: [RowDefinition()],
@@ -428,8 +430,7 @@ extension GridLayoutTests {
     }
 }
 
-// MARK: Auto on rows
-extension GridLayoutTests {
+class GridLayoutTestsAutoRows: GridLayoutTestsBase {
     func testGrid3x1AutoFirstRow() {
         let fillView = UIView.testSpacer()
         
@@ -1159,7 +1160,7 @@ extension GridLayoutTests {
 }
 
 // MARK: Grid Helpers
-extension GridLayoutTests {
+extension GridLayoutTestsBase {
     func addViewsToGrid(_ items: [GridItem],
                         rows: Int = 1, columns: Int = 1,
                         width: CGFloat = 100, height: CGFloat = 100) {
@@ -1224,7 +1225,7 @@ extension GridLayoutTests {
 }
 
 // MARK: Test Helpers
-extension GridLayoutTests {
+extension GridLayoutTestsBase {
     func addViewToScene(_ view: UIView, width: CGFloat = 100, height: CGFloat = 100) {
         view.backgroundColor = .magenta
         viewController.view.addSubview(view)
