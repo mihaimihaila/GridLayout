@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenzyApps_Layout.h; sourceTree = "<group>"; };
-		91C4633D208F495B00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91C4633D208F495B00C0762F /* LayoutInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LayoutInfo.plist; sourceTree = "<group>"; };
 		91C46342208F495B00C0762F /* FrenzyApps.LayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.LayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C46360208F4B7B00C0762F /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		91C46362208F4BA100C0762F /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 			children = (
 				91C46360208F4B7B00C0762F /* GridLayout.swift */,
 				91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */,
-				91C4633D208F495B00C0762F /* Info.plist */,
+				91C4633D208F495B00C0762F /* LayoutInfo.plist */,
 				91C46362208F4BA100C0762F /* UIViewAdditions.swift */,
 				91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */,
 				91C9F866208F5DB30026F66C /* UIColorAdditions.swift */,
@@ -350,7 +350,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FrenzyApps.Layout/Info.plist;
+				INFOPLIST_FILE = FrenzyApps.Layout/LayoutInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -377,7 +377,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FrenzyApps.Layout/Info.plist;
+				INFOPLIST_FILE = FrenzyApps.Layout/LayoutInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -398,7 +398,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
-				INFOPLIST_FILE = FrenzyApps.LayoutTests/Info.plist;
+				INFOPLIST_FILE = FrenzyApps.LayoutTests/LayoutInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +417,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
-				INFOPLIST_FILE = FrenzyApps.LayoutTests/Info.plist;
+				INFOPLIST_FILE = FrenzyApps.LayoutTests/LayoutInfo.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
