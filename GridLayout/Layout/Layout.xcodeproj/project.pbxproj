@@ -13,6 +13,7 @@
 		91C46363208F4BA100C0762F /* UIViewAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46362208F4BA100C0762F /* UIViewAdditions.swift */; };
 		91C9F865208F5D490026F66C /* UIEdgeInsetsAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */; };
 		91C9F867208F5DB30026F66C /* UIColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F866208F5DB30026F66C /* UIColorAdditions.swift */; };
+		E1BADA621142F2751535C7A6 /* Pods_FrenzyApps_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87A3EF56D0FCF1F82C3A80 /* Pods_FrenzyApps_Layout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F71C1714780B0C9996E7FEC /* Pods-FrenzyApps.Layout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.release.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout/Pods-FrenzyApps.Layout.release.xcconfig"; sourceTree = "<group>"; };
 		91C46339208F495B00C0762F /* FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C4633C208F495B00C0762F /* FrenzyApps_Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrenzyApps_Layout.h; sourceTree = "<group>"; };
 		91C4633D208F495B00C0762F /* LayoutInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LayoutInfo.plist; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		91C46362208F4BA100C0762F /* UIViewAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAdditions.swift; sourceTree = "<group>"; };
 		91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsAdditions.swift; sourceTree = "<group>"; };
 		91C9F866208F5DB30026F66C /* UIColorAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAdditions.swift; sourceTree = "<group>"; };
+		9735B5CD4DCDDBD16A567553 /* Pods-FrenzyApps.Layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout/Pods-FrenzyApps.Layout.debug.xcconfig"; sourceTree = "<group>"; };
+		DA87A3EF56D0FCF1F82C3A80 /* Pods_FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BADA621142F2751535C7A6 /* Pods_FrenzyApps_Layout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +60,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05A38D658544B948ADA18885 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA87A3EF56D0FCF1F82C3A80 /* Pods_FrenzyApps_Layout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		91C4632F208F495B00C0762F = {
 			isa = PBXGroup;
 			children = (
 				91C4633B208F495B00C0762F /* FrenzyApps.Layout */,
 				91C4633A208F495B00C0762F /* Products */,
+				DE2878A571AEBBBA33120BC1 /* Pods */,
+				05A38D658544B948ADA18885 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +100,15 @@
 			path = FrenzyApps.Layout;
 			sourceTree = "<group>";
 		};
+		DE2878A571AEBBBA33120BC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9735B5CD4DCDDBD16A567553 /* Pods-FrenzyApps.Layout.debug.xcconfig */,
+				6F71C1714780B0C9996E7FEC /* Pods-FrenzyApps.Layout.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -103,10 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91C4634D208F495B00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout" */;
 			buildPhases = (
+				1358CD24A628D401DA593CF9 /* [CP] Check Pods Manifest.lock */,
 				91C46334208F495B00C0762F /* Sources */,
 				91C46335208F495B00C0762F /* Frameworks */,
 				91C46336208F495B00C0762F /* Headers */,
 				91C46337208F495B00C0762F /* Resources */,
+				91113D422121F2FD00A61CD7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,6 +214,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1358CD24A628D401DA593CF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FrenzyApps.Layout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91113D422121F2FD00A61CD7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91C46334208F495B00C0762F /* Sources */ = {
@@ -341,6 +401,7 @@
 		};
 		91C4634E208F495B00C0762F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9735B5CD4DCDDBD16A567553 /* Pods-FrenzyApps.Layout.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -352,11 +413,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FrenzyApps.Layout/LayoutInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -368,6 +425,7 @@
 		};
 		91C4634F208F495B00C0762F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F71C1714780B0C9996E7FEC /* Pods-FrenzyApps.Layout.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -379,11 +437,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FrenzyApps.Layout/LayoutInfo.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -399,11 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
 				INFOPLIST_FILE = FrenzyApps.LayoutTests/LayoutInfo.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-LayoutTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -418,11 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4V52TL25P5;
 				INFOPLIST_FILE = FrenzyApps.LayoutTests/LayoutInfo.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-LayoutTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -21,12 +21,10 @@ extension UIColor {
     }
     
     public static func customColor(red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) -> UIColor {
-        let r = CGFloat(red) / 255.0
-        let g = CGFloat(green) / 255.0
-        let b = CGFloat(blue) / 255.0
-        let a = CGFloat(alpha) / 255.0
-        
-        return UIColor(red: r, green: g, blue: b, alpha: a)
+        return UIColor(red: CGFloat(red) / 255.0,
+                       green: CGFloat(green) / 255.0,
+                       blue: CGFloat(blue) / 255.0,
+                       alpha: CGFloat(alpha) / 255.0)
     }
     
     public static var customDarkGreen = UIColor.customColor(red: 0, green: 200, blue: 83)

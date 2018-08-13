@@ -3,6 +3,12 @@ use_frameworks!
 
 inhibit_all_warnings!
 
+target 'FrenzyApps.Layout' do
+  project 'Layout/Layout.xcodeproj'
+
+  pod 'SwiftLint'
+end
+
 target 'FrenzyApps.Layout.SampleTests' do
     project 'Sample/Sample.xcodeproj'
   

@@ -81,7 +81,7 @@ public class Position: Equatable, Hashable {
         return row * 1000 + column * 100 + rowSpan * 10 + columnSpan
     }
     
-    public static func ==(lhs: Position, rhs: Position) -> Bool {
+    public static func == (lhs: Position, rhs: Position) -> Bool {
         return lhs.row == rhs.row &&
         lhs.column == rhs.column &&
         lhs.rowSpan == rhs.rowSpan &&
@@ -127,11 +127,11 @@ public class GridItem {
     }
     
     public convenience init(_ view: UIView,
-                row: Int = 0,
-                column: Int = 0,
-                horizontalAlignment: HorizontalAlignment = .center,
-                verticalAlignment: VerticalAlignment = .center,
-                margin: UIEdgeInsets = .zero) {
+                            row: Int = 0,
+                            column: Int = 0,
+                            horizontalAlignment: HorizontalAlignment = .center,
+                            verticalAlignment: VerticalAlignment = .center,
+                            margin: UIEdgeInsets = .zero) {
         self.init(view,
                   position: Position(row: row, column: column),
                   horizontalAlignment: horizontalAlignment,
@@ -157,84 +157,19 @@ public extension UIView {
     }
     
     // Auto rows and columns attempt to stretch their content, additional size constraints should be added appropriately
-    // A view inside a a grid that is placed in another view tends to favor the outer grid size. To avoid this behavior, stretch the inner most view
+    // A view inside a a grid that is placed in another view tends to favor the outer grid size.
+    // To avoid this behavior, stretch the inner most view
     // Use stretch on items with margins placed in auto rows or columns
     // Sets translatesAutoresizingMaskIntoConstraints to false on the returned UIView by default
-    static func gridLayoutView(items: [GridItem],
-                               rowDefinitions: [RowDefinition] = [RowDefinition(isAuto: true)],
-                               columnDefinitions: [ColumnDefinition] = [ColumnDefinition(isAuto: true)]) -> UIView {
-        assert(rowDefinitions.count > 0)
-        assert(columnDefinitions.count > 0)
-        
-        let rows = rowDefinitions.count
-        let columns = columnDefinitions.count
-        
-        let containerView = UIView.spacer()
-        var placeholders = [UIView]()
-        
-        for _ in 0..<max(rows, columns) {
-            let placeholder = UIView.spacer()
-            // Testing
-            // placeholder.backgroundColor = UIColor.customRandomColor()
-            placeholders.append(placeholder)
-            containerView.addSubview(placeholder)
-        }
-        
-        // define the width ratio constraints for all * column placeholders
-        let totalWidthRatio = columnDefinitions.compactMap { $0.isAuto ?  nil : $0.ratio }.reduce(0, +)
-        if let widthReferenceColumn = columnDefinitions.first(where: { !$0.isAuto }),
-            let columnIndex = columnDefinitions.index(where: { $0 === widthReferenceColumn }) {
-            let widthReferencePlaceholder = placeholders[columnIndex]
-            let widthReferenceRatio = totalWidthRatio / widthReferenceColumn.ratio
-            placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
-                let column = placeholderIndex % columns
-                let columnDefinition = columnDefinitions[column]
-                if !columnDefinition.isAuto && placeholder != widthReferencePlaceholder {
-                    let ratio = 1.0 / (totalWidthRatio / columnDefinition.ratio / widthReferenceRatio)
-                    placeholder.widthAnchor.constraint(equalTo: widthReferencePlaceholder.widthAnchor, multiplier: ratio).isActive = true
-                }
-            }
-        }
-        
-        // define the height ratio constraints for all * row placeholders
-        let totalHeightRatio = rowDefinitions.compactMap { $0.isAuto ? nil : $0.ratio }.reduce(0, +)
-        if let heightReferenceRow = rowDefinitions.first(where: { !$0.isAuto }),
-            let rowIndex = rowDefinitions.index(where: { $0 === heightReferenceRow }) {
-            let heightReferencePlaceholder = placeholders[rowIndex]
-            let heightReferenceRatio = totalHeightRatio / heightReferenceRow.ratio
-            placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
-                let row = placeholderIndex % rows
-                let rowDefinition = rowDefinitions[row]
-                if !rowDefinition.isAuto && placeholder != heightReferencePlaceholder {
-                    let ratio = 1.0 / (totalHeightRatio / rowDefinition.ratio / heightReferenceRatio)
-                    placeholder.heightAnchor.constraint(equalTo: heightReferencePlaceholder.heightAnchor, multiplier: ratio).isActive = true
-                }
-            }
-        }
-        
-        // define constraints between placeholders
-        placeholders.enumerated().forEach { (placeholderIndex, spacer) in
-            let column = placeholderIndex % columns
-            let row = placeholderIndex % rows
-            let previousItemIndex = placeholderIndex - 1
-            
-            let anchorLeft = column == 0 ? containerView.leftAnchor : placeholders[previousItemIndex].rightAnchor
-            spacer.leftAnchor.constraint(equalTo: anchorLeft).isActive = true
-            
-            let anchorTop = row == 0 ? containerView.topAnchor : placeholders[previousItemIndex].bottomAnchor
-            spacer.topAnchor.constraint(equalTo: anchorTop).isActive = true
-            
-            if column == columns - 1 {
-                spacer.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
-            }
-            
-            if row == rows - 1 {
-                spacer.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
-            }
-        }
-        
+    static func addItemsConstraints(items: [GridItem],
+                                    columnDefinitions: [ColumnDefinition],
+                                    rowDefinitions: [RowDefinition],
+                                    placeholders: [UIView],
+                                    columns: Int,
+                                    rows: Int,
+                                    containerView: UIView) {
         // additional spacers are needed for cells that span rows or cells
-        var positionSpacers = [Position : UIView]()
+        var positionSpacers = [Position: UIView]()
         
         // define items constraints
         items.forEach { item in
@@ -247,7 +182,7 @@ public extension UIView {
             let placeholderTop = placeholders[position.row]
             let placeholderRight = placeholders[min(position.column + position.columnSpan - 1, columns - 1)]
             let placeholderBottom = placeholders[min(position.row + position.rowSpan - 1, rows - 1)]
-           
+            
             containerView.addSubview(item.view)
             
             if rowDefinition.isAuto {
@@ -256,7 +191,7 @@ public extension UIView {
                     foundItem.position.row == position.row &&
                         foundItem.position.rowSpan == position.rowSpan &&
                         foundItem !== item
-                    }) == nil {
+                }) == nil {
                     item.verticalAlignment = .stretch
                 }
             }
@@ -295,52 +230,162 @@ public extension UIView {
             
             if horizontal == .center {
                 let reference = position.columnSpan == 1 ? placeholderLeft : positionSpacers[position]!
-                item.view.centerXAnchor.constraint(equalTo: reference.centerXAnchor, constant: margin.left - margin.right).isActive = true
+                item.view.centerXAnchor.constraint(equalTo: reference.centerXAnchor,
+                                                   constant: margin.left - margin.right).isActive = true
             }
             
             if vertical == .center {
                 let reference = position.rowSpan == 1 ? placeholderTop : positionSpacers[position]!
-                item.view.centerYAnchor.constraint(equalTo: reference.centerYAnchor, constant: margin.top - margin.bottom).isActive = true
+                item.view.centerYAnchor.constraint(equalTo: reference.centerYAnchor,
+                                                   constant: margin.top - margin.bottom).isActive = true
             }
             
             if columnDefinition.isAuto {
                 let reference = position.columnSpan == 1 ? placeholderLeft : positionSpacers[position]!
-                item.view.widthAnchor.constraint(lessThanOrEqualTo: reference.widthAnchor, constant: -margin.right - margin.left).isActive = true
+                item.view.widthAnchor.constraint(lessThanOrEqualTo: reference.widthAnchor,
+                                                 constant: -margin.right - margin.left).isActive = true
             } else if horizontal == .stretch {
                 item.view.widthAnchor.constraint(greaterThanOrEqualToConstant: 1).isActive = true
             }
             
             if rowDefinition.isAuto {
                 let reference = position.rowSpan == 1 ? placeholderTop : positionSpacers[position]!
-                item.view.heightAnchor.constraint(lessThanOrEqualTo: reference.heightAnchor, constant: -margin.top - margin.bottom).isActive = true
+                item.view.heightAnchor.constraint(lessThanOrEqualTo: reference.heightAnchor,
+                                                  constant: -margin.top - margin.bottom).isActive = true
             } else if vertical == .stretch {
                 item.view.heightAnchor.constraint(greaterThanOrEqualToConstant: 1).isActive = true
             }
             
             if horizontal == .left || horizontal == .stretch {
-                item.view.leftAnchor.constraint(equalTo: placeholderLeft.leftAnchor, constant: margin.left).isActive = true
+                item.view.leftAnchor.constraint(equalTo: placeholderLeft.leftAnchor,
+                                                constant: margin.left).isActive = true
             } else {
-                item.view.leftAnchor.constraint(greaterThanOrEqualTo: placeholderLeft.leftAnchor, constant: margin.left).isActive = true
+                item.view.leftAnchor.constraint(greaterThanOrEqualTo: placeholderLeft.leftAnchor,
+                                                constant: margin.left).isActive = true
             }
             
             if horizontal == .right || horizontal == .stretch {
-                item.view.rightAnchor.constraint(equalTo: placeholderRight.rightAnchor, constant: -margin.right).isActive = true
+                item.view.rightAnchor.constraint(equalTo: placeholderRight.rightAnchor,
+                                                 constant: -margin.right).isActive = true
             } else {
-                item.view.rightAnchor.constraint(lessThanOrEqualTo: placeholderRight.rightAnchor, constant: -margin.right).isActive = true
+                item.view.rightAnchor.constraint(lessThanOrEqualTo: placeholderRight.rightAnchor,
+                                                 constant: -margin.right).isActive = true
             }
             
             if vertical == .top || vertical == .stretch {
                 item.view.topAnchor.constraint(equalTo: placeholderTop.topAnchor, constant: margin.top).isActive = true
             } else {
-                item.view.topAnchor.constraint(greaterThanOrEqualTo: placeholderTop.topAnchor, constant: margin.top).isActive = true
+                item.view.topAnchor.constraint(greaterThanOrEqualTo: placeholderTop.topAnchor,
+                                               constant: margin.top).isActive = true
             }
             
             if vertical == .bottom || vertical == .stretch {
-                item.view.bottomAnchor.constraint(equalTo: placeholderBottom.bottomAnchor, constant: -margin.bottom).isActive = true
+                item.view.bottomAnchor.constraint(equalTo: placeholderBottom.bottomAnchor,
+                                                  constant: -margin.bottom).isActive = true
             } else {
-                item.view.bottomAnchor.constraint(lessThanOrEqualTo: placeholderBottom.bottomAnchor, constant: -margin.bottom).isActive = true
+                item.view.bottomAnchor.constraint(lessThanOrEqualTo: placeholderBottom.bottomAnchor,
+                                                  constant: -margin.bottom).isActive = true
             }
         }
+    }
+    
+    // define the width ratio constraints for all * column placeholders
+    static func addColumnsPlaceholdersConstraints(columnDefinitions: [ColumnDefinition],
+                                                  placeholders: [UIView],
+                                                  columns: Int) {
+        
+        let totalWidthRatio = columnDefinitions.compactMap { $0.isAuto ?  nil : $0.ratio }.reduce(0, +)
+        if let widthReferenceColumn = columnDefinitions.first(where: { !$0.isAuto }),
+            let columnIndex = columnDefinitions.index(where: { $0 === widthReferenceColumn }) {
+            let widthReferencePlaceholder = placeholders[columnIndex]
+            let widthReferenceRatio = totalWidthRatio / widthReferenceColumn.ratio
+            placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
+                let column = placeholderIndex % columns
+                let columnDefinition = columnDefinitions[column]
+                if !columnDefinition.isAuto && placeholder != widthReferencePlaceholder {
+                    let ratio = 1.0 / (totalWidthRatio / columnDefinition.ratio / widthReferenceRatio)
+                    placeholder.widthAnchor.constraint(equalTo: widthReferencePlaceholder.widthAnchor,
+                                                       multiplier: ratio).isActive = true
+                }
+            }
+        }
+    }
+    
+    // define the height ratio constraints for all * row placeholders
+    static func addRowsPlaceholdersConstraints(rowDefinitions: [RowDefinition], placeholders: [UIView], rows: Int) {
+        let totalHeightRatio = rowDefinitions.compactMap { $0.isAuto ? nil : $0.ratio }.reduce(0, +)
+        if let heightReferenceRow = rowDefinitions.first(where: { !$0.isAuto }),
+            let rowIndex = rowDefinitions.index(where: { $0 === heightReferenceRow }) {
+            let heightReferencePlaceholder = placeholders[rowIndex]
+            let heightReferenceRatio = totalHeightRatio / heightReferenceRow.ratio
+            placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
+                let row = placeholderIndex % rows
+                let rowDefinition = rowDefinitions[row]
+                if !rowDefinition.isAuto && placeholder != heightReferencePlaceholder {
+                    let ratio = 1.0 / (totalHeightRatio / rowDefinition.ratio / heightReferenceRatio)
+                    placeholder.heightAnchor.constraint(equalTo: heightReferencePlaceholder.heightAnchor,
+                                                        multiplier: ratio).isActive = true
+                }
+            }
+        }
+    }
+    
+    static func gridLayoutView(items: [GridItem],
+                               rowDefinitions: [RowDefinition] = [RowDefinition(isAuto: true)],
+                               columnDefinitions: [ColumnDefinition] = [ColumnDefinition(isAuto: true)]) -> UIView {
+        assert(rowDefinitions.count > 0)
+        assert(columnDefinitions.count > 0)
+        
+        let rows = rowDefinitions.count
+        let columns = columnDefinitions.count
+        
+        let containerView = UIView.spacer()
+        var placeholders = [UIView]()
+        
+        for _ in 0..<max(rows, columns) {
+            let placeholder = UIView.spacer()
+            // Testing
+            // placeholder.backgroundColor = UIColor.customRandomColor()
+            placeholders.append(placeholder)
+            containerView.addSubview(placeholder)
+        }
+        
+        addColumnsPlaceholdersConstraints(columnDefinitions: columnDefinitions,
+                               placeholders: placeholders,
+                               columns: columns)
+        
+        addRowsPlaceholdersConstraints(rowDefinitions: rowDefinitions,
+                            placeholders: placeholders,
+                            rows: rows)
+        
+        // define constraints between placeholders
+        placeholders.enumerated().forEach { (placeholderIndex, spacer) in
+            let column = placeholderIndex % columns
+            let row = placeholderIndex % rows
+            let previousItemIndex = placeholderIndex - 1
+            
+            let anchorLeft = column == 0 ? containerView.leftAnchor : placeholders[previousItemIndex].rightAnchor
+            spacer.leftAnchor.constraint(equalTo: anchorLeft).isActive = true
+            
+            let anchorTop = row == 0 ? containerView.topAnchor : placeholders[previousItemIndex].bottomAnchor
+            spacer.topAnchor.constraint(equalTo: anchorTop).isActive = true
+            
+            if column == columns - 1 {
+                spacer.rightAnchor.constraint(equalTo: containerView.rightAnchor).isActive = true
+            }
+            
+            if row == rows - 1 {
+                spacer.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
+            }
+        }
+        
+        addItemsConstraints(items: items,
+                            columnDefinitions: columnDefinitions,
+                            rowDefinitions: rowDefinitions,
+                            placeholders: placeholders,
+                            columns: columns,
+                            rows: rows,
+                            containerView: containerView)
         
         return containerView
     }
