@@ -2,8 +2,8 @@ To define an empty grid, start by importing GridLayout module then use the gridL
 
 ```swift
 let grid = UIView.gridLayoutView(items: [GridItem](),
-                                         rowDefinitions: [RowDefinition()],
-                                         columnDefinitions: [ColumnDefinition()])
+                                 rows: [.auto],
+                                 columns: [.auto])
 ```
 
 So far this grid doesn't do much. It contains no `GridItem`, so it is the equivalent of an empty `UIView`.
@@ -17,35 +17,27 @@ rectangle.backgroundColor = .blue
 rectangle.widthAnchor.constraint(equalToConstant: 100).isActive = true
 rectangle.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
-let grid = UIView.gridLayoutView(items: [GridItem(rectangle,
-                                                    horizontalAlignment: .center,
-                                                    verticalAlignment: .center)],
-                                    rowDefinitions: [RowDefinition()],
-                                    columnDefinitions: [ColumnDefinition()])
+let grid = UIView.gridLayoutView(items: [GridItem(rectangle)],
+                                 rows: [.auto],
+                                 columns: [.auto])
 ```
 ![Adding an item to the grid](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/1.png "GridLayout sample: Adding an item to the grid")
 
 #### Defining more rows
 If we add one more row to the grid, `rectangle` will be centered in the top row:
 ```swift
-let grid = UIView.gridLayoutView(items: [GridItem(rectangle,
-                                                    horizontalAlignment: .center,
-                                                    verticalAlignment: .center)],
-                                    rowDefinitions: [RowDefinition(),
-                                                     RowDefinition()],
-                                    columnDefinitions: [ColumnDefinition()])
+let grid = UIView.gridLayoutView(items: [GridItem(rectangle)],
+                                 rows: [.auto, .auto],
+                                 columns: [.auto])
 ```
 ![Defining more rows](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/2.png "GridLayout sample: Defining more rows")
 
 #### Defining more columns
 In a similar fashion, if we add one more column instead, `rectangle` will be centered in the left column:
 ```swift
-let grid = UIView.gridLayoutView(items: [GridItem(rectangle,
-                                                    horizontalAlignment: .center,
-                                                    verticalAlignment: .center)],
-                                    rowDefinitions: [RowDefinition()],
-                                    columnDefinitions: [ColumnDefinition(),
-                                                        ColumnDefinition()])
+let grid = UIView.gridLayoutView(items: [GridItem(rectangle)],
+                                 rows: [.auto],
+                                 columns: [.auto, .auto])
 ```
 ![Defining more columns](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/3.png "GridLayout sample: Defining more columns")
 
@@ -55,24 +47,14 @@ When we define more rows and columns, multiple items can be placed in the grid:
 let rectangle1 = buildRectangle(color: .blue)
 let rectangle2 = buildRectangle(color: .red)
 let rectangle3 = buildRectangle(color: .green)
-let rectangle4 = buildRectangle(color: .magenta) 
+let rectangle4 = buildRectangle(color: .magenta)
 
-let grid = UIView.gridLayoutView(items: [GridItem(rectangle1,
-                                                    row: 0,
-                                                    column: 0),
-                                            GridItem(rectangle2,
-                                                    row: 1,
-                                                    column: 0),
-                                            GridItem(rectangle3,
-                                                    row: 0,
-                                                    column: 1),
-                                            GridItem(rectangle4,
-                                                    row: 1,
-                                                    column: 1),],
-                                    rowDefinitions: [RowDefinition(),
-                                                    RowDefinition()],
-                                    columnDefinitions: [ColumnDefinition(),
-                                                        ColumnDefinition()])
+let grid = UIView.gridLayoutView(items: [GridItem(rectangle1, row: 0, column: 0),
+                                         GridItem(rectangle2, row: 1, column: 0),
+                                         GridItem(rectangle3, row: 0, column: 1),
+                                         GridItem(rectangle4, row: 1, column: 1)],
+                                 rows: [.auto, .auto],
+                                 columns: [.auto, .auto])
 
 func buildRectangle(color: UIColor) -> UIView {
     let rectangle = UIView(frame: .zero)
