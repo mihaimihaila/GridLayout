@@ -227,8 +227,8 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
         let item2 = UIView.testSpacer()
         let item3 = UIView.testSpacer()
         
-        item1.constraint(equalSize: 10)
-        item2.constraint(equalSize: 20)
+        _ = item1.constraint(equalSize: 10)
+        _ = item2.constraint(equalSize: 20)
         
         let view = UIView.gridLayoutView(items: [
             GridItem(item3,
