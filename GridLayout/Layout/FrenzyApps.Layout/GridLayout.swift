@@ -140,6 +140,13 @@ public class GridItem {
     }
 }
 
+extension GridItem {
+    func stretched() {
+        horizontalAlignment = .stretch
+        verticalAlignment = .stretch
+    }
+}
+
 extension GridItem: CustomStringConvertible {
     public var description: String {
         return "GridItem:\n\(position)\nhorizontal: \(horizontalAlignment)\nvertical: \(verticalAlignment)"

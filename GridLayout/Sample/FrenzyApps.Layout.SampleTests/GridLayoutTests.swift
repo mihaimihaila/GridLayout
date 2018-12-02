@@ -63,7 +63,7 @@ class GridLayoutTestsBase: KIFTestCase {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         
         guard let filePath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent(curatedTitle) else { return }
-        try? UIImagePNGRepresentation(image)?.write(to: filePath)
+        try? image.pngData()?.write(to: filePath)
     }
     
 }
@@ -80,7 +80,7 @@ class GridLayoutTestsBasic: GridLayoutTestsBase {
                                          rows: [.auto, .fill],
                                          columns: [.auto])
         
-        itemView1.constraint(width: 30, height: 30)
+        let _ = itemView1.constraint(width: 30, height: 30)
         
         let width: CGFloat = 100
         let height: CGFloat = 100

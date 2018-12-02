@@ -270,13 +270,16 @@
 				TargetAttributes = {
 					91C463F6208F568D00C0762F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 					};
 					91C4640A208F568E00C0762F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 91C463F6208F568D00C0762F;
 					};
 					91C46415208F568E00C0762F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1010;
 						TestTargetID = 91C463F6208F568D00C0762F;
 					};
 				};
@@ -580,7 +583,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -598,7 +601,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -620,7 +623,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrenzyApps.Layout.Sample.app/FrenzyApps.Layout.Sample";
 			};
@@ -643,7 +646,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FrenzyApps.Layout.Sample.app/FrenzyApps.Layout.Sample";
 			};
@@ -663,7 +666,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FrenzyApps.Layout.Sample;
 			};
@@ -683,7 +686,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FrenzyApps.Layout.Sample;
 			};
