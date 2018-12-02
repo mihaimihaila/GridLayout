@@ -141,9 +141,11 @@ public class GridItem {
 }
 
 public extension GridItem {
-    public func stretched() {
+    public func stretched() -> GridItem {
         horizontalAlignment = .stretch
         verticalAlignment = .stretch
+        
+        return self
     }
 }
 
