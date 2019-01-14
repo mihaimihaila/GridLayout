@@ -15,6 +15,10 @@ extension UIEdgeInsets: ExpressibleByIntegerLiteral {
     public init(integerLiteral value: Int) {
         self.init(CGFloat(value))
     }
+    
+    public init(cgFloatLiteral value: CGFloat) {
+        self.init(value)
+    }
 }
 
 public extension UIEdgeInsets {
