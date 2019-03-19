@@ -173,7 +173,7 @@
 				TargetAttributes = {
 					91C46338208F495B00C0762F = {
 						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					91C46341208F495B00C0762F = {
 						CreatedOnToolsVersion = 9.3;
@@ -186,6 +186,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 91C4632F208F495B00C0762F;
 			productRefGroup = 91C4633A208F495B00C0762F /* Products */;
@@ -422,7 +423,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

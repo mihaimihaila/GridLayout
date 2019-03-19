@@ -77,8 +77,11 @@ public class ColumnDefinition: DimensionDefinition {
 }
     
 public class Position: Equatable, Hashable {
-    public var hashValue: Int {
-        return row * 1000 + column * 100 + rowSpan * 10 + columnSpan
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(row)
+        hasher.combine(column)
+        hasher.combine(rowSpan)
+        hasher.combine(columnSpan)
     }
     
     public static func == (lhs: Position, rhs: Position) -> Bool {
@@ -141,7 +144,7 @@ public class GridItem {
 }
 
 public extension GridItem {
-    public func stretched() -> GridItem {
+    func stretched() -> GridItem {
         horizontalAlignment = .stretch
         verticalAlignment = .stretch
         
@@ -305,7 +308,7 @@ public extension UIView {
         
         let totalWidthRatio = columnDefinitions.compactMap { $0.isAuto ?  nil : $0.ratio }.reduce(0, +)
         if let widthReferenceColumn = columnDefinitions.first(where: { !$0.isAuto }),
-            let columnIndex = columnDefinitions.index(where: { $0 === widthReferenceColumn }) {
+            let columnIndex = columnDefinitions.firstIndex(where: { $0 === widthReferenceColumn }) {
             let widthReferencePlaceholder = placeholders[columnIndex]
             let widthReferenceRatio = totalWidthRatio / widthReferenceColumn.ratio
             placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
@@ -324,7 +327,7 @@ public extension UIView {
     static func addRowsPlaceholdersConstraints(rowDefinitions: [RowDefinition], placeholders: [UIView], rows: Int) {
         let totalHeightRatio = rowDefinitions.compactMap { $0.isAuto ? nil : $0.ratio }.reduce(0, +)
         if let heightReferenceRow = rowDefinitions.first(where: { !$0.isAuto }),
-            let rowIndex = rowDefinitions.index(where: { $0 === heightReferenceRow }) {
+            let rowIndex = rowDefinitions.firstIndex(where: { $0 === heightReferenceRow }) {
             let heightReferencePlaceholder = placeholders[rowIndex]
             let heightReferenceRatio = totalHeightRatio / heightReferenceRow.ratio
             placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
