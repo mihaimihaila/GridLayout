@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9117636D22454DF5006CC527 /* GridLayoutTests2x1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117636C22454DF5006CC527 /* GridLayoutTests2x1.swift */; };
+		9117636F2245509E006CC527 /* GridLayoutTests1x1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9117636E2245509E006CC527 /* GridLayoutTests1x1.swift */; };
 		913C60912241AB8A0035FE50 /* GridLayoutTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C60902241AB8A0035FE50 /* GridLayoutTestsBase.swift */; };
 		913C60932241AC440035FE50 /* GridLayoutTests2x2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C60922241AC440035FE50 /* GridLayoutTests2x2.swift */; };
 		913C60952241AC860035FE50 /* GridLayoutTests3x1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C60942241AC860035FE50 /* GridLayoutTests3x1.swift */; };
@@ -17,7 +19,6 @@
 		91C46400208F568D00C0762F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C463FE208F568D00C0762F /* Main.storyboard */; };
 		91C46402208F568E00C0762F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C46401208F568E00C0762F /* Assets.xcassets */; };
 		91C46405208F568E00C0762F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C46403208F568E00C0762F /* LaunchScreen.storyboard */; };
-		91C4641B208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4641A208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift */; };
 		91C9F85F208F5B130026F66C /* FrenzyApps_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */; };
 		91C9F860208F5B130026F66C /* FrenzyApps_Layout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91C9F863208F5BC90026F66C /* GridLayoutTestsBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F862208F5BC90026F66C /* GridLayoutTestsBasic.swift */; };
@@ -47,13 +48,6 @@
 			remoteGlobalIDString = 91C463F6208F568D00C0762F;
 			remoteInfo = FrenzyApps.Layout.Sample;
 		};
-		91C46417208F568E00C0762F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91C463EF208F568D00C0762F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 91C463F6208F568D00C0762F;
-			remoteInfo = FrenzyApps.Layout.Sample;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		3840840ADB716D995EA69073 /* Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout.SampleTests/Pods-FrenzyApps.Layout.SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9117636C22454DF5006CC527 /* GridLayoutTests2x1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTests2x1.swift; sourceTree = "<group>"; };
+		9117636E2245509E006CC527 /* GridLayoutTests1x1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTests1x1.swift; sourceTree = "<group>"; };
 		913C60902241AB8A0035FE50 /* GridLayoutTestsBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTestsBase.swift; sourceTree = "<group>"; };
 		913C60922241AC440035FE50 /* GridLayoutTests2x2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTests2x2.swift; sourceTree = "<group>"; };
 		913C60942241AC860035FE50 /* GridLayoutTests3x1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTests3x1.swift; sourceTree = "<group>"; };
@@ -87,9 +83,6 @@
 		91C46406208F568E00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C4640B208F568E00C0762F /* FrenzyApps.Layout.SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.Layout.SampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C46411208F568E00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91C46416208F568E00C0762F /* FrenzyApps.Layout.SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrenzyApps.Layout.SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91C4641A208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrenzyApps_Layout_SampleUITests.swift; sourceTree = "<group>"; };
-		91C4641C208F568E00C0762F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C9F862208F5BC90026F66C /* GridLayoutTestsBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutTestsBasic.swift; sourceTree = "<group>"; };
 		91C9F868208F5EAA0026F66C /* XCTestCaseAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseAdditions.swift; sourceTree = "<group>"; };
@@ -111,13 +104,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC128E8101D8885FF98B904 /* Pods_FrenzyApps_Layout_SampleTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91C46413208F568E00C0762F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +134,6 @@
 				91C9F85E208F5B130026F66C /* FrenzyApps_Layout.framework */,
 				91C463F9208F568D00C0762F /* FrenzyApps.Layout.Sample */,
 				91C4640E208F568E00C0762F /* FrenzyApps.Layout.SampleTests */,
-				91C46419208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */,
 				91C463F8208F568D00C0762F /* Products */,
 				C9D15FFBC86524C6440272E7 /* Pods */,
 				41463FDE0A15778439C1C313 /* Frameworks */,
@@ -160,7 +145,6 @@
 			children = (
 				91C463F7208F568D00C0762F /* FrenzyApps.Layout.Sample.app */,
 				91C4640B208F568E00C0762F /* FrenzyApps.Layout.SampleTests.xctest */,
-				91C46416208F568E00C0762F /* FrenzyApps.Layout.SampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,26 +164,19 @@
 		91C4640E208F568E00C0762F /* FrenzyApps.Layout.SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				91C9F862208F5BC90026F66C /* GridLayoutTestsBasic.swift */,
+				9117636E2245509E006CC527 /* GridLayoutTests1x1.swift */,
+				9117636C22454DF5006CC527 /* GridLayoutTests2x1.swift */,
 				913C60922241AC440035FE50 /* GridLayoutTests2x2.swift */,
 				913C60942241AC860035FE50 /* GridLayoutTests3x1.swift */,
 				913C60962241ACEB0035FE50 /* GridLayoutTests3x3.swift */,
 				913C60982241AD180035FE50 /* GridLayoutTestsAutoRows.swift */,
 				913C60902241AB8A0035FE50 /* GridLayoutTestsBase.swift */,
+				91C9F862208F5BC90026F66C /* GridLayoutTestsBasic.swift */,
 				913C609A2241AD780035FE50 /* GridLayoutTestsInsideGrid.swift */,
 				91C46411208F568E00C0762F /* Info.plist */,
 				91C9F868208F5EAA0026F66C /* XCTestCaseAdditions.swift */,
 			);
 			path = FrenzyApps.Layout.SampleTests;
-			sourceTree = "<group>";
-		};
-		91C46419208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */ = {
-			isa = PBXGroup;
-			children = (
-				91C4641A208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift */,
-				91C4641C208F568E00C0762F /* Info.plist */,
-			);
-			path = FrenzyApps.Layout.SampleUITests;
 			sourceTree = "<group>";
 		};
 		C9D15FFBC86524C6440272E7 /* Pods */ = {
@@ -252,24 +229,6 @@
 			productReference = 91C4640B208F568E00C0762F /* FrenzyApps.Layout.SampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		91C46415208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 91C46425208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.SampleUITests" */;
-			buildPhases = (
-				91C46412208F568E00C0762F /* Sources */,
-				91C46413208F568E00C0762F /* Frameworks */,
-				91C46414208F568E00C0762F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				91C46418208F568E00C0762F /* PBXTargetDependency */,
-			);
-			name = FrenzyApps.Layout.SampleUITests;
-			productName = FrenzyApps.Layout.SampleUITests;
-			productReference = 91C46416208F568E00C0762F /* FrenzyApps.Layout.SampleUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -285,11 +244,6 @@
 						LastSwiftMigration = 1020;
 					};
 					91C4640A208F568E00C0762F = {
-						CreatedOnToolsVersion = 9.3;
-						LastSwiftMigration = 1020;
-						TestTargetID = 91C463F6208F568D00C0762F;
-					};
-					91C46415208F568E00C0762F = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1020;
 						TestTargetID = 91C463F6208F568D00C0762F;
@@ -317,7 +271,6 @@
 			targets = (
 				91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */,
 				91C4640A208F568E00C0762F /* FrenzyApps.Layout.SampleTests */,
-				91C46415208F568E00C0762F /* FrenzyApps.Layout.SampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -351,13 +304,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		91C46409208F568E00C0762F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91C46414208F568E00C0762F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -422,18 +368,12 @@
 				913C60972241ACEB0035FE50 /* GridLayoutTests3x3.swift in Sources */,
 				91C9F863208F5BC90026F66C /* GridLayoutTestsBasic.swift in Sources */,
 				913C609B2241AD780035FE50 /* GridLayoutTestsInsideGrid.swift in Sources */,
+				9117636F2245509E006CC527 /* GridLayoutTests1x1.swift in Sources */,
 				913C60952241AC860035FE50 /* GridLayoutTests3x1.swift in Sources */,
 				913C60912241AB8A0035FE50 /* GridLayoutTestsBase.swift in Sources */,
+				9117636D22454DF5006CC527 /* GridLayoutTests2x1.swift in Sources */,
 				913C60932241AC440035FE50 /* GridLayoutTests2x2.swift in Sources */,
 				91C9F869208F5EAA0026F66C /* XCTestCaseAdditions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91C46412208F568E00C0762F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91C4641B208F568E00C0762F /* FrenzyApps_Layout_SampleUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,11 +384,6 @@
 			isa = PBXTargetDependency;
 			target = 91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */;
 			targetProxy = 91C4640C208F568E00C0762F /* PBXContainerItemProxy */;
-		};
-		91C46418208F568E00C0762F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 91C463F6208F568D00C0762F /* FrenzyApps.Layout.Sample */;
-			targetProxy = 91C46417208F568E00C0762F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -668,46 +603,6 @@
 			};
 			name = Release;
 		};
-		91C46426208F568E00C0762F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4V52TL25P5;
-				INFOPLIST_FILE = FrenzyApps.Layout.SampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FrenzyApps.Layout.Sample;
-			};
-			name = Debug;
-		};
-		91C46427208F568E00C0762F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4V52TL25P5;
-				INFOPLIST_FILE = FrenzyApps.Layout.SampleUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "frenzyapps.FrenzyApps-Layout-SampleUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FrenzyApps.Layout.Sample;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -734,15 +629,6 @@
 			buildConfigurations = (
 				91C46423208F568E00C0762F /* Debug */,
 				91C46424208F568E00C0762F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		91C46425208F568E00C0762F /* Build configuration list for PBXNativeTarget "FrenzyApps.Layout.SampleUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				91C46426208F568E00C0762F /* Debug */,
-				91C46427208F568E00C0762F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

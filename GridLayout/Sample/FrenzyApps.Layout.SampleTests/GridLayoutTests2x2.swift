@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-import FrenzyApps_Layout
+@testable import FrenzyApps_Layout
 
 class GridLayoutTests2x2: GridLayoutTestsBase {
     func testGrid2x2ItemPlacedAt0x0() {

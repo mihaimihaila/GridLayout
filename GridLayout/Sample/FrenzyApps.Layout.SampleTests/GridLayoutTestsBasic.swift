@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-import FrenzyApps_Layout
+@testable import FrenzyApps_Layout
 
 extension UIView {
     public class func testSpacer() -> UIView {

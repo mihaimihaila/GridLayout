@@ -305,7 +305,6 @@ public extension UIView {
     static func addColumnsPlaceholdersConstraints(columnDefinitions: [ColumnDefinition],
                                                   placeholders: [UIView],
                                                   columns: Int) {
-        
         let totalWidthRatio = columnDefinitions.compactMap { $0.isAuto ?  nil : $0.ratio }.reduce(0, +)
         if let widthReferenceColumn = columnDefinitions.first(where: { !$0.isAuto }),
             let columnIndex = columnDefinitions.firstIndex(where: { $0 === widthReferenceColumn }) {
