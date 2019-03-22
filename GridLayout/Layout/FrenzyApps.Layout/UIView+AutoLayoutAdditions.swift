@@ -1,5 +1,5 @@
 //
-//  UIViewAdditions.swift
+//  UIView+AutoLayoutAdditions.swift
 //  FrenzyApps.Layout
 //
 //  Created by Mihai Mihaila on 2018-04-24.
@@ -36,5 +36,13 @@ extension UIView {
     
     public func constraint(equalSize: Int) -> SizeConstraints {
         return constraint(size: CGSize(width: equalSize, height: equalSize))
+    }
+    
+    func activateConstraint(equalTo: UIView, for anchor: (UIView) -> NSLayoutXAxisAnchor ) {
+        anchor(self).constraint(equalTo: anchor(equalTo)).isActive = true
+    }
+    
+    func constraint(equalTo: UIView, for anchor: (UIView) -> NSLayoutYAxisAnchor ) {
+        anchor(self).constraint(equalTo: anchor(equalTo)).isActive = true
     }
 }

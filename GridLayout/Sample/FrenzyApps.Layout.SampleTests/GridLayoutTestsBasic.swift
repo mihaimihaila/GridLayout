@@ -92,9 +92,8 @@ class GridLayoutTestsBasic: GridLayoutTestsBase {
         itemView.heightAnchor.constraint(equalToConstant: 10).isActive = true
         
         let view = UIView.gridLayoutView(items: [GridItem(itemView, row: 1, margin: UIEdgeInsets(10))],
-                                         rowDefinitions: [RowDefinition(),
-                                                          RowDefinition(isAuto: true)],
-                                         columnDefinitions: [ColumnDefinition()])
+                                         rows: [.fill, .auto],
+                                         columns: [.fill])
         
         addGridToScene(view)
         
@@ -106,32 +105,34 @@ class GridLayoutTestsBasic: GridLayoutTestsBase {
 // MARK: Grid Helpers
 extension GridLayoutTestsBase {
     func addViewsToGrid(_ items: [GridItem],
-                        rows: Int = 1, columns: Int = 1,
+                        rows: Int = 1,
+                        columns: Int = 1,
                         width: CGFloat = 100, height: CGFloat = 100) {
-        var rowDefinitions = [RowDefinition]()
+        var rowDefinitions = [Row]()
         for _ in 0..<rows {
-            rowDefinitions.append(RowDefinition())
+            rowDefinitions.append(.fill)
         }
         
-        var columnDefinitions = [ColumnDefinition]()
+        var columnDefinitions = [Column]()
         for _ in 0..<columns {
-            columnDefinitions.append(ColumnDefinition())
+            columnDefinitions.append(.fill)
         }
         
         addViewsToGrid(items,
-                       rowDefinitions: rowDefinitions, columnDefinitions: columnDefinitions,
+                       rows: rowDefinitions,
+                       columns: columnDefinitions,
                        width: width, height: height)
     }
     
     func addViewsToGrid(_ items: [GridItem],
-                        rowDefinitions: [RowDefinition],
-                        columnDefinitions: [ColumnDefinition],
+                        rows: [Row],
+                        columns: [Column],
                         width: CGFloat = 100,
                         height: CGFloat = 100) {
         
         let view = UIView.gridLayoutView(items: items,
-                                         rowDefinitions: rowDefinitions,
-                                         columnDefinitions: columnDefinitions)
+                                         rows: rows,
+                                         columns: columns)
         
         addGridToScene(view, width: width, height: height)
     }

@@ -29,8 +29,8 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                         GridItem(autoItem2,
                                  row: 2, column: 0,
                                  horizontalAlignment: .stretch, verticalAlignment: .stretch)],
-                       rowDefinitions: [RowDefinition(), RowDefinition(isAuto: true), RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto, .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 00, width: 90, height: 60), fillView.frame)
@@ -53,10 +53,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                         GridItem(autoItem1,
                                  row: 1,
                                  column: 0)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill,
+                              .auto,
+                              .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 80), fillView.frame)
@@ -85,10 +85,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                                  row: 1),
                         GridItem(autoItem2,
                                  row: 2)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill,
+                              .auto,
+                              .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 60), fillView.frame)
@@ -120,10 +120,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                         GridItem(autoItem2,
                                  row: 2,
                                  verticalAlignment: .stretch)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill,
+                              .auto,
+                              .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 30), fillView.frame)
@@ -153,10 +153,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                                  margin: UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)),
                         GridItem(autoItem2,
                                  row: 2)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill,
+                              .auto,
+                              .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 30), fillView.frame)
@@ -186,10 +186,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                                  margin: UIEdgeInsets(top: 30, left: 0, bottom: 5, right: 0)),
                         GridItem(autoItem2,
                                  row: 2)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill,
+                              .auto,
+                              .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 25), fillView.frame)
@@ -227,10 +227,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                         GridItem(autoItem2,
                                  row: 2),
             ],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill,
+                              .auto,
+                              .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 60), fillView.frame)
@@ -253,11 +253,11 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
             GridItem(item1, row: 1),
             GridItem(item2, row: 2)
             ],
-                                         rowDefinitions: [RowDefinition(),
-                                                          RowDefinition(isAuto: true),
-                                                          RowDefinition(isAuto: true)
+                                         rows: [.fill,
+                                                .auto,
+                                                .auto
             ],
-                                         columnDefinitions: [ColumnDefinition()])
+                                         columns: [.fill])
         
         addGridToScene(view, width: 90, height: 90)
         
@@ -279,11 +279,11 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                      horizontalAlignment: .stretch,
                      verticalAlignment: .stretch),
             ],
-                                         rowDefinitions: [RowDefinition(),
-                                                          RowDefinition(),
-                                                          RowDefinition()
+                                         rows: [.fill,
+                                                .fill,
+                                                .fill
             ],
-                                         columnDefinitions: [ColumnDefinition()])
+                                         columns: [.fill])
         
         addGridToScene(view, width: 90, height: 90)
         
@@ -307,10 +307,10 @@ class GridLayoutTests3x1: GridLayoutTestsBase {
                      horizontalAlignment: .stretch,
                      verticalAlignment: .stretch),
             ],
-                                         rowDefinitions: [RowDefinition()],
-                                         columnDefinitions: [ColumnDefinition(),
-                                                             ColumnDefinition(),
-                                                             ColumnDefinition()])
+                                         rows: [.fill],
+                                         columns: [.fill,
+                                                   .fill,
+                                                   .fill])
         
         addGridToScene(view, width: 90, height: 90)
         

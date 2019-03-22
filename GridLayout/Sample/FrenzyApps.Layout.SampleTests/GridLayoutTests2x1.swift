@@ -30,9 +30,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                                  horizontalAlignment: .stretch,
                                  verticalAlignment: .stretch,
                                  margin: UIEdgeInsets(top: 20, left: 0, bottom: 15, right: 0))],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 45), fillView.frame)
@@ -58,9 +57,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                                  column: 0,
                                  verticalAlignment: .stretch,
                                  margin: UIEdgeInsets(top: 20, left: 0, bottom: 15, right: 0))],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90,
                        height: 90)
         
@@ -87,9 +85,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                                  horizontalAlignment: .stretch,
                                  verticalAlignment: .stretch,
                                  margin: UIEdgeInsets(top: 20, left: 0, bottom: 30, right: 0))],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 50, width: 90, height: 10), autoItem1.frame)
@@ -118,9 +115,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                                  row: 1),
                         GridItem(autoItem2,
                                  row: 1)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 70), fillView.frame)
@@ -151,9 +147,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                         GridItem(autoItem1,
                                  row: 1,
                                  verticalAlignment: .center),],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90,
                        height: 90)
         
@@ -185,9 +180,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                         GridItem(autoItem1,
                                  row: 1,
                                  verticalAlignment: .top),],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90,
                        height: 90)
         
@@ -219,9 +213,8 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                         GridItem(autoItem1,
                                  row: 1,
                                  verticalAlignment: .bottom),],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90,
                        height: 90)
         
@@ -254,39 +247,12 @@ class GridLayoutTests2x1: GridLayoutTestsBase {
                                  row: 1,
                                  horizontalAlignment: .right,
                                  verticalAlignment: .bottom)],
-                       rowDefinitions: [RowDefinition(),
-                                        RowDefinition(isAuto: true)],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill, .auto],
+                       columns: [.fill],
                        width: 90,
                        height: 90)
         
         XCTAssertEqual(CGRect(x: 80, y: 80, width: 10, height: 10), autoItem1.frame)
-        saveScreenshot()
-    }
-    
-    func testGrid2x1AutoFirstColumnUsingMargins() {
-        let fillView = UIView.testSpacer()
-        let autoItem1 = UIView.testSpacer()
-        
-        autoItem1.widthAnchor.constraint(equalToConstant: 10).isActive = true
-        
-        addViewsToGrid([GridItem(fillView,
-                                 row: 0,
-                                 column: 0,
-                                 horizontalAlignment: .stretch,
-                                 verticalAlignment: .stretch),
-                        GridItem(autoItem1,
-                                 row: 0,
-                                 column: 1,
-                                 horizontalAlignment: .stretch,
-                                 verticalAlignment: .stretch,
-                                 margin: UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 20))],
-                       rowDefinitions: [RowDefinition()],
-                       columnDefinitions: [ColumnDefinition(),
-                                           ColumnDefinition(isAuto: true)],
-                       width: 90, height: 90)
-        
-        XCTAssertEqual(CGRect(x: 0, y: 0, width: 45, height: 90), fillView.frame)
         saveScreenshot()
     }
 }

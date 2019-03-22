@@ -13,14 +13,14 @@ import FrenzyApps_Layout
 class GridLayoutTestsInsideGrid: GridLayoutTestsBase {
     func testGrid1x1CenterInsideAnotherGrid() {
         let itemView = UIView.gridLayoutView(items: [],
-                                             rowDefinitions: [RowDefinition()],
-                                             columnDefinitions: [ColumnDefinition()])
+                                             rows: [.auto],
+                                             columns: [.auto])
         
         itemView.backgroundColor = .blue
         
         addViewsToGrid([GridItem(itemView)],
-                       rowDefinitions: [RowDefinition()],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill],
+                       columns: [.fill],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 45, y: 45, width: 0, height: 0), itemView.frame)
@@ -35,14 +35,14 @@ class GridLayoutTestsInsideGrid: GridLayoutTestsBase {
         let innerGrid = UIView.gridLayoutView(items: [GridItem(itemView,
                                                                horizontalAlignment: .stretch,
                                                                verticalAlignment: .stretch)],
-                                              rowDefinitions: [RowDefinition()],
-                                              columnDefinitions: [ColumnDefinition()])
+                                              rows: [.auto],
+                                              columns: [.auto])
         
         innerGrid.backgroundColor = .green
         
         addViewsToGrid([GridItem(innerGrid)],
-                       rowDefinitions: [RowDefinition()],
-                       columnDefinitions: [ColumnDefinition()],
+                       rows: [.fill],
+                       columns: [.fill],
                        width: 90,
                        height: 90)
         

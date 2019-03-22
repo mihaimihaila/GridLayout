@@ -30,10 +30,10 @@ class GridLayoutTestsAutoRows: GridLayoutTestsBase {
                                  column: 1),
                         GridItem(autoItem2,
                                  column: 2)],
-                       rowDefinitions: [RowDefinition()],
-                       columnDefinitions: [ColumnDefinition(),
-                                           ColumnDefinition(isAuto: true),
-                                           ColumnDefinition(isAuto: true)],
+                       rows: [.fill],
+                       columns: [.fill,
+                                 .auto,
+                                 .auto],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 60, height: 90), fillView.frame)
@@ -59,9 +59,8 @@ class GridLayoutTestsAutoRows: GridLayoutTestsBase {
                                  column: 1,
                                  horizontalAlignment: .stretch,
                                  margin: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 15))],
-                       rowDefinitions: [RowDefinition()],
-                       columnDefinitions: [ColumnDefinition(),
-                                           ColumnDefinition(isAuto: true)],
+                       rows: [.fill],
+                       columns: [.fill, .auto],
                        width: 90,
                        height: 90)
         
@@ -88,12 +87,37 @@ class GridLayoutTestsAutoRows: GridLayoutTestsBase {
                                  horizontalAlignment: .stretch,
                                  verticalAlignment: .stretch,
                                  margin: UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 30))],
-                       rowDefinitions: [RowDefinition()],
-                       columnDefinitions: [ColumnDefinition(),
-                                           ColumnDefinition(isAuto: true)],
+                       rows: [.fill],
+                       columns: [.fill, .auto],
                        width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 50, y: 0, width: 10, height: 90), autoItem1.frame)
+        saveScreenshot()
+    }
+    
+    
+    func testGrid1x2AutoFirstColumnUsingMargins() {
+        let fillView = UIView.testSpacer()
+        let autoItem1 = UIView.testSpacer()
+        
+        autoItem1.widthAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        addViewsToGrid([GridItem(fillView,
+                                 row: 0,
+                                 column: 0,
+                                 horizontalAlignment: .stretch,
+                                 verticalAlignment: .stretch),
+                        GridItem(autoItem1,
+                                 row: 0,
+                                 column: 1,
+                                 horizontalAlignment: .stretch,
+                                 verticalAlignment: .stretch,
+                                 margin: UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 20))],
+                       rows: [.fill],
+                       columns: [.fill, .auto],
+                       width: 90, height: 90)
+        
+        XCTAssertEqual(CGRect(x: 0, y: 0, width: 45, height: 90), fillView.frame)
         saveScreenshot()
     }
 }

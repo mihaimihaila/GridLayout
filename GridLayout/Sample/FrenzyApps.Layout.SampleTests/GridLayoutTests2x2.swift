@@ -59,16 +59,32 @@ class GridLayoutTests2x2: GridLayoutTestsBase {
                                                            row: 1,
                                                            horizontalAlignment: .stretch,
                                                            verticalAlignment: .stretch)],
-                                         rowDefinitions: [RowDefinition(),
-                                                          RowDefinition()],
-                                         columnDefinitions: [ColumnDefinition(),
-                                                             ColumnDefinition()])
+                                         rows: [.fill, .fill],
+                                         columns: [.fill, .fill])
         
         addGridToScene(view, width: 90, height: 90)
         
         XCTAssertEqual(CGRect(x: 0, y: 0, width: 90, height: 45), item1.frame)
         XCTAssertEqual(CGRect(x: 0, y: 45, width: 45, height: 45), item2.frame)
         
+        saveScreenshot()
+    }
+    
+    func testGrid2x2CenterAlignedItemWithMarginsAcrossRowsAndColumns() {
+        let fillView = UIView.testSpacer()
+        fillView.backgroundColor = .blue
+        
+        fillView.heightAnchor.constraint(equalToConstant: 10).isActive = true
+        fillView.widthAnchor.constraint(equalToConstant: 10).isActive = true
+        
+        addViewsToGrid([GridItem(fillView,
+                                 position: Position(rowSpan: 2, columnSpan: 2),
+                                 margin: UIEdgeInsets(top: 5, left: 10, bottom: 20, right: 30))],
+                       rows: [.fill, .fill],
+                       columns: [.fill, .fill],
+                       width: 90, height: 90)
+        
+        XCTAssertEqual(CGRect(x: 20, y: 25, width: 10, height: 10), fillView.frame)
         saveScreenshot()
     }
 }
