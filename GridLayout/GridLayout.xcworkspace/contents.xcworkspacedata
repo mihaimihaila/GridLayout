@@ -10,7 +10,4 @@
    <FileRef
       location = "group:Sample/Sample.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:Layout/Layout.xcodeproj">
-   </FileRef>
 </Workspace>
