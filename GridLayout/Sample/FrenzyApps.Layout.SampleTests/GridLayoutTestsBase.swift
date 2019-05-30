@@ -52,5 +52,6 @@ class GridLayoutTestsBase: XCTestCase {
         
         guard let filePath = NSURL(fileURLWithPath: paths[0]).appendingPathComponent(curatedTitle) else { return }
         try? image.pngData()?.write(to: filePath)
+        print("Screenshot saved to \(filePath)")
     }
 }

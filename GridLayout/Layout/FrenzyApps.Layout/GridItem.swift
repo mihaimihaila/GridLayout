@@ -9,6 +9,20 @@
 import Foundation
 
 public class GridItem {
+    public enum HorizontalAlignment {
+        case left
+        case center
+        case right
+        case stretch
+    }
+    
+    public enum VerticalAlignment {
+        case top
+        case center
+        case bottom
+        case stretch
+    }
+    
     public let view: UIView
     public var position: Position
     var horizontalAlignment: HorizontalAlignment
@@ -54,18 +68,4 @@ extension GridItem: CustomStringConvertible {
     public var description: String {
         return "GridItem:\n\(position)\nhorizontal: \(horizontalAlignment)\nvertical: \(verticalAlignment)"
     }
-}
-
-public enum HorizontalAlignment {
-    case left
-    case center
-    case right
-    case stretch
-}
-
-public enum VerticalAlignment {
-    case top
-    case center
-    case bottom
-    case stretch
 }
