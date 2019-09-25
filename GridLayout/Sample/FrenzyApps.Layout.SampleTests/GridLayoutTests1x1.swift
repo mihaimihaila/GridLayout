@@ -32,6 +32,25 @@ class GridLayoutTests1x1: GridLayoutTestsBase {
         saveScreenshot()
     }
     
+    func testGrid1x1FillItemWithMargins() {
+           let fillView = UIView.testSpacer()
+           fillView.backgroundColor = .blue
+           
+          addViewsToGrid([GridItem(fillView,
+                     row: 0,
+                     column: 0,
+                     horizontalAlignment: .stretch,
+                     verticalAlignment: .stretch,
+                     margin: UIEdgeInsets(top: 20, left: 10, bottom: 30, right: 50))],
+           rows: [.fill],
+           columns: [.fill],
+           width: 90,
+           height: 90)
+           
+           XCTAssertEqual(CGRect(x: 10, y: 20, width: 30, height: 40), fillView.frame)
+           saveScreenshot()
+       }
+    
     func testGrid1x1BottomLeftAlignedItemWithMargins() {
         let fillView = UIView.testSpacer()
         fillView.backgroundColor = .blue
