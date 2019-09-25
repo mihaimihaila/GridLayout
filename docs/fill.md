@@ -8,7 +8,7 @@ rectangle.backgroundColor = .blue
 let grid = UIView.gridLayoutView(items: [[GridItem(rectangle, 
                                                    horizontalAlignment: .stretch, 
                                                    verticalAlignment: .stretch, 
-                                                   margin: UIEdgeInsets(top: 20, left: 10, bottom: 30, right: 50))]],
+                                                   margin: .init(top: 20, left: 10, bottom: 30, right: 50))]],
                                 rows: [.fill],
                                 columns: [.fill],
                                 width: 90,
