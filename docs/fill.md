@@ -1,5 +1,5 @@
 Items can fil a container by using the `stretch` alignment for both horizontal and vertical alignment.
-```
+
 ```swift
 let rectangle = UIView(frame: .zero)
 rectangle.translatesAutoresizingMaskIntoConstraints = false
