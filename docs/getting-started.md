@@ -1,4 +1,4 @@
-To define an empty grid, start by importing GridLayout module then use the gridLayoutView extension method on UIView:
+To define an empty grid, start by importing `GridLayout` module then use the `gridLayoutView` extension method on `UIView`:
 
 ```swift
 let grid = UIView.gridLayoutView(items: [GridItem](),

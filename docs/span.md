@@ -1,4 +1,4 @@
-Items can span rows and column. When spanning across rows and column, a virtual row or column is created based on the span rules.
+Items can span rows and columns. When spanning across rows and column, a virtual row or column is created based on the span rules.
 ```swift
 let rectangle1 = buildRectangle(color: .blue)
 let rectangle2 = buildRectangle(color: .red)
@@ -27,6 +27,6 @@ In this example `rectangle5` spans 2 columns, while being placed by default at r
 
 #### Notice
 
-In this example we placed more than one item in the grid at the same row and column. This is an accepted behavior and the z order corresponds to the order the index of the `GridItem` in the `items` collection. 
+In this example we placed more than one item in the grid at the same row and column. This is an accepted behavior and the Z order corresponds to the order the index of the `GridItem` in the `items` collection. 
 `rectangle5` appears below `rectangle1` and `rectangle2` because it appears first in the `items` collection.
 If `rectangle1` and `rectangle2` were to overlap, `rectangle1` would appear below `rectangle2`.

@@ -8,8 +8,7 @@
 
 import Foundation
 
-public class Position: Equatable, Hashable {
-    
+public struct Position: Hashable {
     public var row: Int
     public var column: Int
     public var rowSpan: Int
@@ -20,13 +19,6 @@ public class Position: Equatable, Hashable {
         hasher.combine(column)
         hasher.combine(rowSpan)
         hasher.combine(columnSpan)
-    }
-    
-    public static func == (lhs: Position, rhs: Position) -> Bool {
-        return lhs.row == rhs.row &&
-            lhs.column == rhs.column &&
-            lhs.rowSpan == rhs.rowSpan &&
-            lhs.columnSpan == rhs.columnSpan
     }
     
     public init(row: Int = 0, column: Int = 0, rowSpan: Int = 1, columnSpan: Int = 1) {

@@ -35,8 +35,6 @@ public extension UIView {
         
         for _ in 0..<max(rows, columns) {
             let placeholder = UIView.spacer()
-            // Testing
-            // placeholder.backgroundColor = UIColor.customRandomColor()
             placeholders.append(placeholder)
             containerView.addSubview(placeholder)
         }
@@ -88,17 +86,17 @@ public extension UIView {
     private static func addColumnPlaceholdersConstraints(columnDefinitions: [ColumnDefinition],
                                                          placeholders: [UIView]) -> [NSLayoutConstraint] {
         var constraints = [NSLayoutConstraint]()
-        let totalWidthRatio = columnDefinitions.compactMap { $0.isAuto ?  nil : $0.ratio }.reduce(0, +)
-        if let widthReferenceColumn = columnDefinitions.first(where: { !$0.isAuto }),
-            let columnIndex = columnDefinitions.firstIndex(where: { $0 === widthReferenceColumn }) {
-            let widthReferencePlaceholder = placeholders[columnIndex]
-            let widthReferenceRatio = totalWidthRatio / widthReferenceColumn.ratio
+        let ratio = columnDefinitions.compactMap { $0.isAuto ?  nil : $0.ratio }.reduce(0, +)
+        if let referenceColumn = columnDefinitions.first(where: { !$0.isAuto }),
+            let columnIndex = columnDefinitions.firstIndex(where: { $0 == referenceColumn }) {
+            let referencePlaceholder = placeholders[columnIndex]
+            let referenceRatio = ratio / referenceColumn.ratio
             placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
                 let column = placeholderIndex % columnDefinitions.count
                 let columnDefinition = columnDefinitions[column]
-                if !columnDefinition.isAuto && placeholder != widthReferencePlaceholder {
-                    let ratio = 1.0 / (totalWidthRatio / columnDefinition.ratio / widthReferenceRatio)
-                    let constraint = placeholder.widthAnchor.constraint(equalTo: widthReferencePlaceholder.widthAnchor,
+                if !columnDefinition.isAuto && placeholder != referencePlaceholder {
+                    let ratio = 1.0 / (ratio / columnDefinition.ratio / referenceRatio)
+                    let constraint = placeholder.widthAnchor.constraint(equalTo: referencePlaceholder.widthAnchor,
                                                                         multiplier: ratio)
                     constraints.append(constraint)
                 }
@@ -114,16 +112,17 @@ public extension UIView {
         var constraints = [NSLayoutConstraint]()
         
         let totalHeightRatio = rowDefinitions.compactMap { $0.isAuto ? nil : $0.ratio }.reduce(0, +)
-        if let heightReferenceRow = rowDefinitions.first(where: { !$0.isAuto }),
-            let rowIndex = rowDefinitions.firstIndex(where: { $0 === heightReferenceRow }) {
-            let heightReferencePlaceholder = placeholders[rowIndex]
-            let heightReferenceRatio = totalHeightRatio / heightReferenceRow.ratio
+        if let referenceRow = rowDefinitions.first(where: { !$0.isAuto }),
+            let rowIndex = rowDefinitions.firstIndex(where: { $0 == referenceRow }) {
+            
+            let referencePlaceholder = placeholders[rowIndex]
+            let ratio = totalHeightRatio / referenceRow.ratio
             placeholders.enumerated().forEach { (placeholderIndex, placeholder) in
                 let row = placeholderIndex % rowDefinitions.count
                 let rowDefinition = rowDefinitions[row]
-                if !rowDefinition.isAuto && placeholder != heightReferencePlaceholder {
-                    let ratio = 1.0 / (totalHeightRatio / rowDefinition.ratio / heightReferenceRatio)
-                    let constraint = placeholder.heightAnchor.constraint(equalTo: heightReferencePlaceholder.heightAnchor,
+                if !rowDefinition.isAuto && placeholder != referencePlaceholder {
+                    let ratio = 1.0 / (totalHeightRatio / rowDefinition.ratio / ratio)
+                    let constraint = placeholder.heightAnchor.constraint(equalTo: referencePlaceholder.heightAnchor,
                                                                          multiplier: ratio)
                     constraints.append(constraint)
                 }
@@ -251,7 +250,8 @@ public extension UIView {
             }
             
             if vertical == .top || vertical == .stretch {
-                constraints.append(item.view.topAnchor.constraint(equalTo: placeholderTop.topAnchor, constant: margin.top))
+                constraints.append(item.view.topAnchor.constraint(equalTo: placeholderTop.topAnchor,
+                                                                  constant: margin.top))
             } else {
                 constraints.append(item.view.topAnchor.constraint(greaterThanOrEqualTo: placeholderTop.topAnchor,
                                                                   constant: margin.top))

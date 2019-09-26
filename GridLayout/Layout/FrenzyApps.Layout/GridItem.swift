@@ -24,7 +24,8 @@ public class GridItem {
     }
     
     public let view: UIView
-    public var position: Position
+    var position: Position
+    
     var horizontalAlignment: HorizontalAlignment
     var verticalAlignment: VerticalAlignment
     let margin: UIEdgeInsets

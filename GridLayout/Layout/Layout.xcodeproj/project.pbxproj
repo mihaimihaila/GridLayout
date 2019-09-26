@@ -15,7 +15,7 @@
 		91C46361208F4B7B00C0762F /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46360208F4B7B00C0762F /* GridLayout.swift */; };
 		91C46363208F4BA100C0762F /* UIView+AutoLayoutAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C46362208F4BA100C0762F /* UIView+AutoLayoutAdditions.swift */; };
 		91C9F865208F5D490026F66C /* UIEdgeInsetsAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */; };
-		91C9F867208F5DB30026F66C /* UIColorAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9F866208F5DB30026F66C /* UIColorAdditions.swift */; };
+		91F35AEB233D5A6F00F48038 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F35AEA233D5A6F00F48038 /* UIColor+Additions.swift */; };
 		E1BADA621142F2751535C7A6 /* Pods_FrenzyApps_Layout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA87A3EF56D0FCF1F82C3A80 /* Pods_FrenzyApps_Layout.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		91C46360208F4B7B00C0762F /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		91C46362208F4BA100C0762F /* UIView+AutoLayoutAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayoutAdditions.swift"; sourceTree = "<group>"; };
 		91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsetsAdditions.swift; sourceTree = "<group>"; };
-		91C9F866208F5DB30026F66C /* UIColorAdditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAdditions.swift; sourceTree = "<group>"; };
+		91F35AEA233D5A6F00F48038 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		9735B5CD4DCDDBD16A567553 /* Pods-FrenzyApps.Layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrenzyApps.Layout.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrenzyApps.Layout/Pods-FrenzyApps.Layout.debug.xcconfig"; sourceTree = "<group>"; };
 		DA87A3EF56D0FCF1F82C3A80 /* Pods_FrenzyApps_Layout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrenzyApps_Layout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,9 +102,9 @@
 				91C46360208F4B7B00C0762F /* GridLayout.swift */,
 				91C4633D208F495B00C0762F /* LayoutInfo.plist */,
 				91176370224554AB006CC527 /* Position.swift */,
-				91C9F866208F5DB30026F66C /* UIColorAdditions.swift */,
 				91C9F864208F5D490026F66C /* UIEdgeInsetsAdditions.swift */,
 				91C46362208F4BA100C0762F /* UIView+AutoLayoutAdditions.swift */,
+				91F35AEA233D5A6F00F48038 /* UIColor+Additions.swift */,
 			);
 			path = FrenzyApps.Layout;
 			sourceTree = "<group>";
@@ -266,11 +266,11 @@
 			files = (
 				91176373224554C8006CC527 /* GridItem.swift in Sources */,
 				91C46363208F4BA100C0762F /* UIView+AutoLayoutAdditions.swift in Sources */,
-				91C9F867208F5DB30026F66C /* UIColorAdditions.swift in Sources */,
 				91C46361208F4B7B00C0762F /* GridLayout.swift in Sources */,
 				9117637522455911006CC527 /* DimensionDefinition.swift in Sources */,
 				91176371224554AB006CC527 /* Position.swift in Sources */,
 				91C9F865208F5D490026F66C /* UIEdgeInsetsAdditions.swift in Sources */,
+				91F35AEB233D5A6F00F48038 /* UIColor+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

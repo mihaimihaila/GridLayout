@@ -8,19 +8,29 @@
 
 import Foundation
 
-public class DimensionDefinition {
-    let ratio: CGFloat
-    let isAuto: Bool
+public protocol DimensionDefinition {
+    var ratio: CGFloat { get }
+    var isAuto: Bool { get }
+}
+
+public struct RowDefinition: Equatable, DimensionDefinition {
+    public let ratio: CGFloat
+    public let isAuto: Bool
+    
     public init(isAuto: Bool = false, ratio: CGFloat = 1) {
         self.ratio = ratio
         self.isAuto = isAuto
     }
 }
 
-public class RowDefinition: DimensionDefinition {
-}
-
-public class ColumnDefinition: DimensionDefinition {
+public struct ColumnDefinition: Equatable, DimensionDefinition {
+    public let ratio: CGFloat
+    public let isAuto: Bool
+    
+    public init(isAuto: Bool = false, ratio: CGFloat = 1) {
+        self.ratio = ratio
+        self.isAuto = isAuto
+    }
 }
 
 public enum Row {
