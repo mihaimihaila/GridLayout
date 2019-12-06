@@ -24,7 +24,7 @@ extension UIView {
       return constraint(width: size.width, height: size.height)
     }
     
-    public func constraint(width: CGFloat, height: CGFloat) -> SizeConstraints {
+    @discardableResult public func constraint(width: CGFloat, height: CGFloat) -> SizeConstraints {
         let widthConstraint = widthAnchor.constraint(equalToConstant: width)
         let heightConstraint = heightAnchor.constraint(equalToConstant: height)
         
