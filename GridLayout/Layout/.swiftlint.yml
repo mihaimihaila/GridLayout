@@ -1,3 +1,0 @@
-disabled_rules:
-- trailing_whitespace
-- cyclomatic_complexity
