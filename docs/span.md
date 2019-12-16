@@ -23,7 +23,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle5,
 ```
 In this example `rectangle5` spans 2 columns, while being placed by default at row: 0 and column: 0. This means a virtual column is created with the properties of column starting at 0 and ending at 1. By stretching `rectangle5` both horizontally and vertically, the precise positioning within the grid can be observed.
 
-![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/9.png "Sample")
+![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/Output/9.png "Sample")
 
 #### Notice
 

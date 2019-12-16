@@ -8,7 +8,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle1, row: 0, column: 0)
 ```
 This example defines two columns: the first with a ratio of 1 and the second with a ratio of 2. This means the horizontal space will be split in 3 units, with the first column taking 1 unit and the second column taking 2 units.
 
-![Sample 5](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/5.png "Sample 5")
+![Sample 5](https://github.com/mihaimihaila/GridLayout/blob/master/Output/5.png "Sample 5")
 
 ```swift
 let rectangle1 = buildRectangle(color: .blue)
@@ -21,4 +21,4 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle1, row: 0, column: 0)
 ```
 This example defines two rows: the first with a ratio of 1 and the second with a ratio of 3. This means the vertical space will be split in 4 units, with the first row taking 1 unit and the second row taking 3 units.
 
-![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/6.png "Sample")
+![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/Output/6.png "Sample")

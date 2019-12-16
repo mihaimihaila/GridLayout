@@ -31,7 +31,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle1, row: 0, column: 0,
                                  rows: [.auto, .auto],
                                  columns: [.auto, .auto])
 ```
-![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/10.png "Sample")
+![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/Output/10.png "Sample")
 
 ## Alignment and Auto Layout
 

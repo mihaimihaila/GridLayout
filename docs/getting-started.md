@@ -21,7 +21,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle)],
                                  rows: [.auto],
                                  columns: [.auto])
 ```
-![Adding an item to the grid](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/1.png "GridLayout sample: Adding an item to the grid")
+![Adding an item to the grid](https://github.com/mihaimihaila/GridLayout/blob/master/Output/1.png "GridLayout sample: Adding an item to the grid")
 
 #### Defining more rows
 If we add one more row to the grid, `rectangle` will be centered in the top row:
@@ -30,7 +30,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle)],
                                  rows: [.auto, .auto],
                                  columns: [.auto])
 ```
-![Defining more rows](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/2.png "GridLayout sample: Defining more rows")
+![Defining more rows](https://github.com/mihaimihaila/GridLayout/blob/master/Output/2.png "GridLayout sample: Defining more rows")
 
 #### Defining more columns
 In a similar fashion, if we add one more column instead, `rectangle` will be centered in the left column:
@@ -39,7 +39,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle)],
                                  rows: [.auto],
                                  columns: [.auto, .auto])
 ```
-![Defining more columns](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/3.png "GridLayout sample: Defining more columns")
+![Defining more columns](https://github.com/mihaimihaila/GridLayout/blob/master/Output/3.png "GridLayout sample: Defining more columns")
 
 #### Adding more items on various rows and columns
 When we define more rows and columns, multiple items can be placed in the grid:
@@ -66,4 +66,4 @@ func buildRectangle(color: UIColor) -> UIView {
     return rectangle
 }
 ```
-![Adding more items on various rows and columns](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/4.png "GridLayout sample: Adding more items on various rows and columns")
+![Adding more items on various rows and columns](https://github.com/mihaimihaila/GridLayout/blob/master/Output/4.png "GridLayout sample: Adding more items on various rows and columns")

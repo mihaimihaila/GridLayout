@@ -12,7 +12,7 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle1, row: 0, column: 0)
 ```
 In this example the first row is *auto* while the the second one is not. This means the first row will fit the space required by `rectangle1`, while the second row will fill the remaining space.
 
-![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/7.png "Sample")
+![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/Output/7.png "Sample")
 
 ```swift
 let rectangle1 = buildRectangle(color: .blue)
@@ -25,4 +25,4 @@ let grid = UIView.gridLayoutView(items: [GridItem(rectangle1, row: 0, column: 0)
 ```
 In this example the second column is *auto* while the the first one is not. This means the second column will fit the space required by `rectangle2`, while the first column will fill the remaining space.
 
-![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/8.png "Sample")
+![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/Output/8.png "Sample")

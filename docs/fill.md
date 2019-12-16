@@ -14,4 +14,4 @@ let grid = UIView.gridLayoutView(items: [[GridItem(rectangle,
                                 width: 90,
                                 height: 90)
 ```
-![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/GridLayout/Output/11.png "Sample")
+![Sample](https://github.com/mihaimihaila/GridLayout/blob/master/Output/11.png "Sample")
