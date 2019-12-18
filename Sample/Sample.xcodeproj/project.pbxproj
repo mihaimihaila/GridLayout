@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91CFF11923AAE0A000DEF97D /* GridLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 91CFF11823AAE0A000DEF97D /* GridLayout */; };
 		91E99B6923A849210038DAEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E99B6823A849210038DAEA /* AppDelegate.swift */; };
 		91E99B6B23A849210038DAEA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E99B6A23A849210038DAEA /* SceneDelegate.swift */; };
 		91E99B6D23A849210038DAEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E99B6C23A849210038DAEA /* ViewController.swift */; };
 		91E99B7023A849210038DAEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E99B6E23A849210038DAEA /* Main.storyboard */; };
 		91E99B7223A849230038DAEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E99B7123A849230038DAEA /* Assets.xcassets */; };
 		91E99B7523A849230038DAEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E99B7323A849230038DAEA /* LaunchScreen.storyboard */; };
-		91E99B8C23A849320038DAEA /* GridLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 91E99B8B23A849320038DAEA /* GridLayout */; };
 		91E99BA923A849940038DAEA /* GridLayoutTests1x1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E99BA023A849940038DAEA /* GridLayoutTests1x1.swift */; };
 		91E99BAA23A849940038DAEA /* GridLayoutTestsBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E99BA123A849940038DAEA /* GridLayoutTestsBase.swift */; };
 		91E99BAB23A849940038DAEA /* GridLayoutTestsAutoRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E99BA223A849940038DAEA /* GridLayoutTestsAutoRows.swift */; };
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E99B8C23A849320038DAEA /* GridLayout in Frameworks */,
+				91CFF11923AAE0A000DEF97D /* GridLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +152,7 @@
 			);
 			name = Sample;
 			packageProductDependencies = (
-				91E99B8B23A849320038DAEA /* GridLayout */,
+				91CFF11823AAE0A000DEF97D /* GridLayout */,
 			);
 			productName = Sample;
 			productReference = 91E99B6523A849210038DAEA /* Sample.app */;
@@ -520,7 +520,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		91E99B8B23A849320038DAEA /* GridLayout */ = {
+		91CFF11823AAE0A000DEF97D /* GridLayout */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GridLayout;
 		};
